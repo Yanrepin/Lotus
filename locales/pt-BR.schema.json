@@ -1532,6 +1532,9 @@
           "label": "Exibir avaliações do produto",
           "info": "Para exibir uma avaliação, adicione um app com essa funcionalidade específica. [Saiba mais](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Ativar rolagem infinita"
+        },
         "columns_desktop": {
           "label": "Número de colunas no desktop"
         },

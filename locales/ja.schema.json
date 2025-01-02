@@ -1532,6 +1532,9 @@
           "label": "商品の評価を表示",
           "info": "評価を表示するには、商品評価アプリを追加します。[詳しくはこちら](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "無限スクロールを有効にする"
+        },
         "columns_desktop": {
           "label": "デスクトップの列数"
         },

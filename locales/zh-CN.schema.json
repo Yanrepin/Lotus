@@ -1532,6 +1532,9 @@
           "label": "显示产品评分",
           "info": "若要显示评分，请添加产品评分应用。[详细了解](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "启用无限滚动"
+        },
         "columns_desktop": {
           "label": "桌面上的列数"
         },

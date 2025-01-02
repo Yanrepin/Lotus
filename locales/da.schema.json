@@ -1532,6 +1532,9 @@
           "label": "Vis produktbedømmelser",
           "info": "Hvis du vil vise bedømmelser, skal du tilføje en app til produktbedømmelse. [Få mere at vide](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Aktivér uendelig rulning"
+        },
         "columns_desktop": {
           "label": "Antallet af kolonner på computer"
         },

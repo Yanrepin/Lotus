@@ -1532,6 +1532,9 @@
           "label": "แสดงคะแนนของสินค้า",
           "info": "หากต้องการแสดงคะแนน ให้เพิ่มแอปการให้คะแนนสินค้า [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "เปิดใช้งานการเลื่อนแบบไม่สิ้นสุด"
+        },
         "columns_desktop": {
           "label": "จำนวนของคอลัมน์บนเดสก์ท็อป"
         },

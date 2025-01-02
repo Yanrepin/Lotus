@@ -17,6 +17,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "infinity_scroll":false,
         "enable_filtering": true,
         "enable_sorting": true,
         "columns_mobile": "2",

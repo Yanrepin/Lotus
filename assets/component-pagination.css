@@ -14,6 +14,7 @@
   justify-content: center;
 }
 
+
 .pagination__list > li {
   flex: 1 0 4.4rem;
   max-width: 4.4rem;

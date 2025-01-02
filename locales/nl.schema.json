@@ -1532,6 +1532,9 @@
           "label": "Geef productbeoordeling weer",
           "info": "Voeg een app toe voor productbeoordelingen om deze weer te geven. [Meer informatie](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Schakel oneindig scrollen in"
+        },
         "columns_desktop": {
           "label": "Aantal kolommen op desktop"
         },

@@ -1532,6 +1532,9 @@
           "label": "顯示產品評等",
           "info": "新增產品評等應用程式，即可顯示評等。[瞭解詳情](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "啟用無限滾動"
+        },
         "columns_desktop": {
           "label": "電腦版的欄數"
         },

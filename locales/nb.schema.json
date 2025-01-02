@@ -1532,6 +1532,9 @@
           "label": "Vis produktvurdering",
           "info": "Legg til en produktvurderingsapp for å vise en vurdering. [Finn ut mer](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Aktiver uendelig rulling"
+        },
         "columns_desktop": {
           "label": "Antall kolonner på datamaskin"
         },

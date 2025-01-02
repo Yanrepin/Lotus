@@ -1532,6 +1532,9 @@
           "label": "Zobrazit hodnocení produktů",
           "info": "Pokud chcete zobrazovat hodnocení, přidejte si aplikaci pro hodnocení produktů. [Zjistit více](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Povolit nekonečné rolování"
+        },
         "columns_desktop": {
           "label": "Počet sloupců na počítači"
         },

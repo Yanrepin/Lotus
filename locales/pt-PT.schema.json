@@ -1532,6 +1532,9 @@
           "label": "Mostrar classificação do produto",
           "info": "Para mostrar uma classificação, adicione uma aplicação de classificação de produto. [Saber mais](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Ativar rolagem infinita"
+        },
         "columns_desktop": {
           "label": "Número de colunas no ambiente de trabalho"
         },

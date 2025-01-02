@@ -1532,6 +1532,9 @@
           "label": "Mostra valutazione del prodotto",
           "info": "Per mostrare una valutazione, aggiungi un'app di valutazione del prodotto. [Maggiori informazioni](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Abilita lo scroll infinito"
+        },
         "columns_desktop": {
           "label": "Numero di colonne su desktop"
         },

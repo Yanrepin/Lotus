@@ -1532,6 +1532,9 @@
           "label": "Afficher la note du produit",
           "info": "Pour afficher une note, ajoutez une application d'évaluation de produits. [En savoir plus](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "infinity_scroll":{
+          "label": "Activer le défilement infini"
+        },
         "columns_desktop": {
           "label": "Nombre de colonnes sur ordinateur"
         },

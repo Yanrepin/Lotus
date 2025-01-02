@@ -189,6 +189,10 @@
         {%- endif -%}
       </div>
     </div>
+
+    {% if section.settings.infinity_scroll %}
+      {% render 'infinity-scroll', next_page: paginate.next.url, page_size: paginate.pages, end_text: '...' %}
+    {% endif %}
   {%- endpaginate -%}
   {% if section.settings.image_shape == 'arch' %}
     {{ 'mask-arch.svg' | inline_asset_content }}
@@ -302,12 +306,19 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
     },
+
     {
       "type": "checkbox",
       "id": "show_rating",
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
       "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "infinity_scroll",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.infinity_scroll.label"
     },
     {
       "type": "select",
