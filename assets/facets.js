@@ -84,6 +84,9 @@ class FacetFiltersForm extends HTMLElement {
       .parseFromString(html, 'text/html')
       .getElementById('ProductGridContainer').innerHTML;
 
+    //console.log('test');
+    window.localStorage.setItem('filterSort', 'true');
+
     document
       .getElementById('ProductGridContainer')
       .querySelectorAll('.scroll-trigger')

@@ -209,6 +209,7 @@
       this.initGrid();
       this.init();
       this.page = 1;
+      this.currentUrl = window.location.href;
       this.scrollToTopBtn = document.querySelector('.scrollToTopButton');
       this.scrollToTopBtn.addEventListener('click', this.scrollToTopFx.bind(this));
     }
@@ -233,13 +234,18 @@
       observer.observe(this);
     }
 
-    fetchNextPage(e) {
+    async fetchNextPage(e) {
       if (e <= this.dataset.pageSize) {
+        console.log(e);
+        console.log(this.dataset.next);
         const t = `{{ shop.url }}/${this.dataset.next}`;
-        const i = new URL(t);
-        i.searchParams.set('page', e);
-        const r = i.href;
-        fetch(`${r}`, { method: 'GET', headers: { 'Content-Type': 'text/html' } })
+        const currentUrl = new URL(t);
+        currentUrl.searchParams.set('page', e);
+        const url = currentUrl.href;
+
+        {% comment %} window.history.replaceState({}, '', currentUrl); {% endcomment %}
+
+        await fetch(`${url}`, { method: 'GET', headers: { 'Content-Type': 'text/html' } })
           .then((e) => e.text())
           .then((e) => {
             const t = new DOMParser().parseFromString(e, 'text/html');
@@ -254,15 +260,27 @@
         this.innerHTML = `<h2>${this.dataset.endText}</h2>`;
       }
     }
+
     revealItem(e, t) {
       const [i] = e;
+
+      if(window.localStorage.getItem("filterSort"))
+      {
+        window.localStorage.removeItem("filterSort");
+        this.gridContainer.innerHTML = '';
+        this.initGrid();
+        this.page = 1;
+        this.dataset.next = window.location.href.split('.com')[1];
+
+      }
+
       if (!i.isIntersecting) return;
       if (i.target) {
         this.page++;
         this.fetchNextPage(this.page);
       }
       if (this.page == this.dataset.pageSize) {
-        t.unobserve(i.target);
+        //t.unobserve(i.target);
       }
     }
     scrollToTopFx(e) {
