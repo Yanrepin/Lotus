@@ -5,7 +5,7 @@
     {
       "type": "image_picker",
       "id": "shop_the_look_image",
-      "label": "Background Image"
+      "label": "Image"
     },
     {
       "type": "checkbox",
@@ -13,14 +13,24 @@
       "label": "lazy load"
     },
     {
+      "type": "color",
+      "id": "spot",
+      "label": "Hot spots background",
+      "default": "#FFF"
+    },
+    {
+      "type": "header",
+      "content": "Product 1"
+    },
+    {
       "type": "product",
       "id": "product_1",
-      "label": "Product 1"
+      "label": "Product"
     },
     {
       "type": "range",
       "id": "dot_1_x",
-      "label": "Dot 1 X Position",
+      "label": "Horizontal position",
       "default": 50,
       "min": 0,
       "max": 100
@@ -28,20 +38,24 @@
     {
       "type": "range",
       "id": "dot_1_y",
-      "label": "Dot 1 Y Position",
+      "label": "Vertical position",
       "default": 50,
       "min": 0,
       "max": 100
     },
     {
+      "type": "header",
+      "content": "Product 2"
+    },
+    {
       "type": "product",
       "id": "product_2",
-      "label": "Product 2"
+      "label": "Product"
     },
     {
       "type": "range",
       "id": "dot_2_x",
-      "label": "Dot 2 X Position",
+      "label": "Horizontal position",
       "default": 50,
       "min": 0,
       "max": 100
@@ -49,20 +63,24 @@
     {
       "type": "range",
       "id": "dot_2_y",
-      "label": "Dot 2 Y Position",
+      "label": "Vertical position",
       "default": 50,
       "min": 0,
       "max": 100
     },
     {
+      "type": "header",
+      "content": "Product 3"
+    },
+    {
       "type": "product",
       "id": "product_3",
-      "label": "Product 3"
+      "label": "Product"
     },
     {
       "type": "range",
       "id": "dot_3_x",
-      "label": "Dot 3 X Position",
+      "label": "Horizontal position",
       "default": 50,
       "min": 0,
       "max": 100
@@ -70,20 +88,24 @@
     {
       "type": "range",
       "id": "dot_3_y",
-      "label": "Dot 3 Y Position",
+      "label": "Vertical position",
       "default": 50,
       "min": 0,
       "max": 100
     },
     {
+      "type": "header",
+      "content": "Product 4"
+    },
+    {
       "type": "product",
       "id": "product_4",
-      "label": "Product 4"
+      "label": "Product"
     },
     {
       "type": "range",
       "id": "dot_4_x",
-      "label": "Dot 4 X Position",
+      "label": "Horizontal position",
       "default": 50,
       "min": 0,
       "max": 100
@@ -91,7 +113,7 @@
     {
       "type": "range",
       "id": "dot_4_y",
-      "label": "Dot 4 Y Position",
+      "label": "Vertical position",
       "default": 50,
       "min": 0,
       "max": 100
@@ -109,24 +131,53 @@
   <div class="shop-the-look__image">
     <img
       srcset="
-        {%- if section.settings.shop_the_look_image.width >= 165 -%}{{ section.settings.shop_the_look_image | image_url: width: 165 }} 165w,{%- endif -%}
-        {%- if section.settings.shop_the_look_image.width >= 360 -%}{{ section.settings.shop_the_look_image | image_url: width: 360 }} 360w,{%- endif -%}
-        {%- if section.settings.shop_the_look_image.width >= 533 -%}{{ section.settings.shop_the_look_image | image_url: width: 533 }} 533w,{%- endif -%}
-        {%- if section.settings.shop_the_look_image.width >= 720 -%}{{ section.settings.shop_the_look_image | image_url: width: 720 }} 720w,{%- endif -%}
-        {%- if section.settings.shop_the_look_image.width >= 940 -%}{{ section.settings.shop_the_look_image | image_url: width: 940 }} 940w,{%- endif -%}
-        {%- if section.settings.shop_the_look_image.width >= 1066 -%}{{ section.settings.shop_the_look_image | image_url: width: 1066 }} 1066w,{%- endif -%}
-        {{ section.settings.shop_the_look_image | image_url }} {{ section.settings.shop_the_look_image.width }}w
+        {%- if section.settings.shop_the_look_image -%}
+          {%- if section.settings.shop_the_look_image.width >= 165 -%}{{ section.settings.shop_the_look_image | image_url: width: 165 }} 165w,{%- endif -%}
+          {%- if section.settings.shop_the_look_image.width >= 360 -%}{{ section.settings.shop_the_look_image | image_url: width: 360 }} 360w,{%- endif -%}
+          {%- if section.settings.shop_the_look_image.width >= 533 -%}{{ section.settings.shop_the_look_image | image_url: width: 533 }} 533w,{%- endif -%}
+          {%- if section.settings.shop_the_look_image.width >= 720 -%}{{ section.settings.shop_the_look_image | image_url: width: 720 }} 720w,{%- endif -%}
+          {%- if section.settings.shop_the_look_image.width >= 940 -%}{{ section.settings.shop_the_look_image | image_url: width: 940 }} 940w,{%- endif -%}
+          {%- if section.settings.shop_the_look_image.width >= 1066 -%}{{ section.settings.shop_the_look_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+          {{ section.settings.shop_the_look_image | image_url }} {{ section.settings.shop_the_look_image.width }}w
+        {%- else -%}
+          {{ 'shop-the-look-defualt-image.png' | asset_url }}
+        {%- endif -%}
       "
-      src="{{ section.settings.shop_the_look_image | image_url: width: 533 }}"
+      src="
+        {%- if section.settings.shop_the_look_image -%}
+          {{ section.settings.shop_the_look_image | image_url: width: 533 }}
+        {%- else -%}
+          {{ 'shop-the-look-defualt-image.png' | asset_url }}
+        {%- endif -%}
+      "
       sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-      alt="{{ section.settings.shop_the_look_image.alt | escape }}"
+      alt="
+        {%- if section.settings.shop_the_look_image -%}
+          {{ section.settings.shop_the_look_image.alt | escape }}
+        {%- else -%}
+          'Default Shop The Look Image'
+        {%- endif -%}
+      "
       class="motion-reduce"
       {% unless section.settings.lazy_load == false %}
         loading="lazy"
       {% endunless %}
-      width="{{ section.settings.shop_the_look_image.width }}"
-      height="{{ section.settings.shop_the_look_image.height }}"
+      width="
+        {%- if section.settings.shop_the_look_image -%}
+          {{ section.settings.shop_the_look_image.width }}
+        {%- else -%}
+          800
+        {%- endif -%}
+      "
+      height="
+        {%- if section.settings.shop_the_look_image -%}
+          {{ section.settings.shop_the_look_image.height }}
+        {%- else -%}
+          600
+        {%- endif -%}
+      "
     >
+
     {% for i in (1..4) %}
       <div
         class="shop-the-look-dot"
