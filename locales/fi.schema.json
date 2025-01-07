@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "Pikatilausluettelo"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Kuva",
+      "lazy_load": "Hidas lataus",
+      "spot": "Kuuman pisteen tausta",
+      "product": "Tuote",
+      "horizontal_position": "Vaakasuora sijainti",
+      "vertical_position": "Pystysuora sijainti"
     }
+
   }
 }

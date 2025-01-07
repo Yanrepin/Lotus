@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "快速訂單清單"
       }
-    }
+    },
+    "shop_the_look": {
+      "main_image": "圖片",
+      "lazy_load": "懶加載",
+      "spot": "熱點背景",
+      "product": "產品",
+      "horizontal_position": "水平位置",
+      "vertical_position": "垂直位置"
+    }   
+
   }
 }

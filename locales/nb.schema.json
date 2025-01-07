@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "Hurtigordreliste"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Bilde",
+      "lazy_load": "Lazy load",
+      "spot": "Hotspot bakgrunn",
+      "product": "Produkt",
+      "horizontal_position": "Vannrett posisjon",
+      "vertical_position": "Loddrett posisjon"
     }
+
   }
 }

@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "Lista de encomendas rápida"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Imagem",
+      "lazy_load": "Carregamento preguiçoso",
+      "spot": "Fundo dos hotspots",
+      "product": "Produto",
+      "horizontal_position": "Posição horizontal",
+      "vertical_position": "Posição vertical"
     }
+
   }
 }

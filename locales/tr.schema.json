@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "Hızlı sipariş listesi"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Görsel",
+      "lazy_load": "Tembel yükleme",
+      "spot": "Sıcak nokta arka planı",
+      "product": "Ürün",
+      "horizontal_position": "Yatay konum",
+      "vertical_position": "Dikey konum"
     }
+
   }
 }

@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "Snelle lijst met bestellingen"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Afbeelding",
+      "lazy_load": "Lazy load",
+      "spot": "Achtergrond van hotspots",
+      "product": "Product",
+      "horizontal_position": "Horizontale positie",
+      "vertical_position": "Verticale positie"
     }
+
   }
 }

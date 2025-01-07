@@ -3419,6 +3419,14 @@
       "presets": {
         "name": "Hurtig ordreliste"
       }
-    }
+    },
+    "shop_the_look":{
+      "main_image":"Billede",
+      "lazy_load":"Langsom indlæsning",
+      "spot":"Baggrund for hotspots",
+      "product":"Produkt",
+      "horizontal_position":"Vandret position",
+      "vertical_position":"Lodret position"
+    },
   }
 }

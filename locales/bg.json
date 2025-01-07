@@ -265,6 +265,14 @@
     }
   },
   "sections": {
+    "shop_the_look":{
+      "main_image":"Изображение",
+      "lazy_load":"Бавно зареждане",
+      "spot":"Фон на горещите точки",
+      "product":"Продукт",
+      "horizontal_position":"Хоризонтална позиция",
+      "vertical_position":"Вертикална позиция"
+    },
     "header": {
       "announcement": "Известие",
       "menu": "Меню",

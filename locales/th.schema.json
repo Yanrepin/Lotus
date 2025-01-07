@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "รายการคำสั่งซื้อแบบด่วน"
       }
+    },
+    "shop_the_look": {
+      "main_image": "ภาพ",
+      "lazy_load": "การโหลดช้า",
+      "spot": "พื้นหลังของฮอตสปอต",
+      "product": "สินค้า",
+      "horizontal_position": "ตำแหน่งแนวนอน",
+      "vertical_position": "ตำแหน่งแนวตั้ง"
     }
+
   }
 }

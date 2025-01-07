@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "Elenco ordini rapido"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Immagine",
+      "lazy_load": "Caricamento pigro",
+      "spot": "Sfondo dei punti caldi",
+      "product": "Prodotto",
+      "horizontal_position": "Posizione orizzontale",
+      "vertical_position": "Posizione verticale"
     }
+
   }
 }

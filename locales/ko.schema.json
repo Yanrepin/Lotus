@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "빠른 주문 목록"
       }
+    },
+    "shop_the_look": {
+      "main_image": "이미지",
+      "lazy_load": "지연 로딩",
+      "spot": "핫스팟 배경",
+      "product": "제품",
+      "horizontal_position": "수평 위치",
+      "vertical_position": "수직 위치"
     }
+
   }
 }

@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "迅速な注文リスト"
       }
+    },
+    "shop_the_look": {
+      "main_image": "画像",
+      "lazy_load": "遅延読み込み",
+      "spot": "ホットスポットの背景",
+      "product": "製品",
+      "horizontal_position": "水平方向の位置",
+      "vertical_position": "垂直方向の位置"
     }
+
   }
 }

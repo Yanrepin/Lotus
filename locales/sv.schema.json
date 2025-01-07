@@ -3419,6 +3419,15 @@
       "presets": {
         "name": "Snabb orderlista"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Bild",
+      "lazy_load": "Lazy load",
+      "spot": "Hotspot bakgrund",
+      "product": "Produkt",
+      "horizontal_position": "Horisontell position",
+      "vertical_position": "Vertikal position"
     }
+
   }
 }

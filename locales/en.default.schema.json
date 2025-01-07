@@ -3419,6 +3419,14 @@
       "presets": {
         "name": "Collapsible content"
       }
+    },
+    "shop_the_look": {
+      "main_image": "Image",
+      "lazy_load": "Lazy load",
+      "spot": "Hot spots background",
+      "product": "Product",
+      "horizontal_position": "Horizontal position",
+      "vertical_position": "Vertical position"
     }
   }
 }
