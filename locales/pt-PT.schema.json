@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "Logo do WhatsApp",
+          "info": "É melhor carregar o ficheiro em formato PNG sem fundo"
+        },
+        "whatsapp_number": {
+          "label": "O seu número do WhatsApp"
+        },
+        "whatsapp_message": {
+          "label": "Mensagem predefinida",
+          "info": "A mensagem predefinida no teclado do cliente quando é redirecionado para a aplicação"
+        },
+        "show_desktop": {
+          "label": "Mostrar no desktop"
+        },
+        "show_mobile": {
+          "label": "Mostrar no telemóvel"
+        },
+        "position": {
+          "header": "Posição",
+          "options__1": "Canto superior direito",
+          "options__2": "Canto superior esquerdo",
+          "options__3": "Canto inferior direito",
+          "options__4": "Canto inferior esquerdo",
+          "options": "Posição",
+          "margin_right": "Margem direita",
+          "margin_left": "Margem esquerda",
+          "margin_top": "Margem superior",
+          "margin_bottom": "Margem inferior"
+        }
+      }
+    },
     "colors": {
       "name": "Cores",
       "settings": {

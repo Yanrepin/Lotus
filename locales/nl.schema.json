@@ -1,5 +1,39 @@
 {
-  "settings_schema": {
+  "settings_schema": {  
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp-logo",
+          "info": "Het is het beste om een PNG-bestand zonder achtergrond te uploaden"
+        },
+        "whatsapp_number": {
+          "label": "Je WhatsApp-nummer"
+        },
+        "whatsapp_message": {
+          "label": "Standaardbericht",
+          "info": "Het standaardbericht op het toetsenbord van de klant wanneer deze naar de app wordt doorgestuurd"
+        },
+        "show_desktop": {
+          "label": "Toon op desktop"
+        },
+        "show_mobile": {
+          "label": "Toon op mobiel"
+        },
+        "position": {
+          "header": "Plaatsing",
+          "options__1": "Rechtsboven",
+          "options__2": "Linksboven",
+          "options__3": "Rechtonder",
+          "options__4": "Linksonder",
+          "options": "Positie",
+          "margin_right": "Rechter marge",
+          "margin_left": "Linker marge",
+          "margin_top": "Bovenmarge",
+          "margin_bottom": "Onder marge"
+        }
+      }
+    },
     "colors": {
       "name": "Kleuren",
       "settings": {

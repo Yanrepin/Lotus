@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp logosu",
+          "info": "Arka planı olmayan PNG formatında yüklemeniz tavsiye edilir"
+        },
+        "whatsapp_number": {
+          "label": "WhatsApp numaranız"
+        },
+        "whatsapp_message": {
+          "label": "Varsayılan mesaj",
+          "info": "Uygulamaya yönlendirildiğinde müşterinin klavyesinde görünen varsayılan mesaj"
+        },
+        "show_desktop": {
+          "label": "Masaüstünde göster"
+        },
+        "show_mobile": {
+          "label": "Mobilde göster"
+        },
+        "position": {
+          "header": "Konum",
+          "options__1": "Sağ üst köşe",
+          "options__2": "Sol üst köşe",
+          "options__3": "Sağ alt köşe",
+          "options__4": "Sol alt köşe",
+          "options": "Pozisyon",
+          "margin_right": "Sağ boşluk",
+          "margin_left": "Sol boşluk",
+          "margin_top": "Üst boşluk",
+          "margin_bottom": "Alt boşluk"
+        }
+      }
+    },
     "colors": {
       "name": "Renkler",
       "settings": {

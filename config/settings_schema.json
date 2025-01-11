@@ -1465,5 +1465,107 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "t:settings_schema.whatsapp.name",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "whatsapp_logo",
+        "label": "t:settings_schema.whatsapp.settings.whatsapp_logo.label",
+        "info": "t:settings_schema.whatsapp.settings.whatsapp_logo.info"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "t:settings_schema.whatsapp.settings.whatsapp_number.label"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_message",
+        "label": "t:settings_schema.whatsapp.settings.whatsapp_message.label",
+        "info": "t:settings_schema.whatsapp.settings.whatsapp_message.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "whatsapp_show_desktop",
+        "label": "t:settings_schema.whatsapp.settings.show_desktop.label",
+
+      },
+      {
+        "type": "checkbox",
+        "id": "whatsapp_show_mobile",
+        "label": "t:settings_schema.whatsapp.settings.show_mobile.label",
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.whatsapp.settings.position.header"
+      },
+      {
+        "type": "select",
+        "id": "whatsapp_position",
+        "options": [
+          {
+            "value": "right-top",
+            "label": "t:settings_schema.whatsapp.settings.position.options__1"
+          },
+          {
+            "value": "left-top",
+            "label": "t:settings_schema.whatsapp.settings.position.options__2"
+          },
+          {
+            "value": "right-bottom",
+            "label": "t:settings_schema.whatsapp.settings.position.options__3"
+          }
+          ,
+          {
+            "value": "left-bottom",
+            "label": "t:settings_schema.whatsapp.settings.position.options__4"
+          }
+        ],
+        "default": "left-bottom",
+        "label": "t:settings_schema.whatsapp.settings.position.options"
+      },
+      {
+        "type": "range",
+        "id": "whatsapp_margin_right",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 0,
+        "unit": "%",
+        "label": "t:settings_schema.whatsapp.settings.position.margin_right"
+      },
+      {
+        "type": "range",
+        "id": "whatsapp_margin_left",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 0,
+        "unit": "%",
+        "label": "t:settings_schema.whatsapp.settings.position.margin_left"
+      },
+      {
+        "type": "range",
+        "id": "whatsapp_margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 0,
+        "unit": "%",
+        "label": "t:settings_schema.whatsapp.settings.position.margin_top"
+      },
+      {
+        "type": "range",
+        "id": "whatsapp_margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 0,
+        "unit": "%",
+        "label": "t:settings_schema.whatsapp.settings.position.margin_bottom"
+      }
+    ]
   }
 ]

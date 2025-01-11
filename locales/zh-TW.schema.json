@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp 標誌",
+          "info": "建議上傳無背景的 PNG 格式"
+        },
+        "whatsapp_number": {
+          "label": "您的 WhatsApp 號碼"
+        },
+        "whatsapp_message": {
+          "label": "預設訊息",
+          "info": "當客戶被重定向到應用程式時，鍵盤上的預設訊息"
+        },
+        "show_desktop": {
+          "label": "在桌面顯示"
+        },
+        "show_mobile": {
+          "label": "在行動裝置顯示"
+        },
+        "position": {
+          "header": "位置",
+          "options__1": "右上角",
+          "options__2": "左上角",
+          "options__3": "右下角",
+          "options__4": "左下角",
+          "options": "位置",
+          "margin_right": "右邊距",
+          "margin_left": "左邊距",
+          "margin_top": "上邊距",
+          "margin_bottom": "下邊距"
+        }
+      }
+    },
     "colors": {
       "name": "色彩",
       "settings": {

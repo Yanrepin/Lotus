@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsAppロゴ",
+          "info": "背景なしのPNG形式でアップロードすることをお勧めします"
+        },
+        "whatsapp_number": {
+          "label": "あなたのWhatsApp番号"
+        },
+        "whatsapp_message": {
+          "label": "デフォルトメッセージ",
+          "info": "アプリにリダイレクトされた際に顧客のキーボードに表示されるデフォルトメッセージ"
+        },
+        "show_desktop": {
+          "label": "デスクトップで表示"
+        },
+        "show_mobile": {
+          "label": "モバイルで表示"
+        },
+        "position": {
+          "header": "配置",
+          "options__1": "右上",
+          "options__2": "左上",
+          "options__3": "右下",
+          "options__4": "左下",
+          "options": "位置",
+          "margin_right": "右余白",
+          "margin_left": "左余白",
+          "margin_top": "上余白",
+          "margin_bottom": "下余白"
+        }
+      }
+    },
     "colors": {
       "name": "色",
       "settings": {

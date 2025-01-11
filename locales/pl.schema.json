@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "Logo WhatsApp",
+          "info": "Najlepiej jest przesłać plik PNG bez tła"
+        },
+        "whatsapp_number": {
+          "label": "Twój numer WhatsApp"
+        },
+        "whatsapp_message": {
+          "label": "Domyślny komunikat",
+          "info": "Domyślny komunikat na klawiaturze klienta, gdy jest przekierowywany do aplikacji"
+        },
+        "show_desktop": {
+          "label": "Pokaż na komputerze"
+        },
+        "show_mobile": {
+          "label": "Pokaż na telefonie"
+        },
+        "position": {
+          "header": "Pozycja",
+          "options__1": "Prawy górny róg",
+          "options__2": "Lewy górny róg",
+          "options__3": "Prawy dolny róg",
+          "options__4": "Lewy dolny róg",
+          "options": "Pozycja",
+          "margin_right": "Margines prawy",
+          "margin_left": "Margines lewy",
+          "margin_top": "Margines górny",
+          "margin_bottom": "Margines dolny"
+        }
+      }
+    },
     "colors": {
       "name": "Kolory",
       "settings": {

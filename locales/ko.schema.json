@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp 로고",
+          "info": "배경이 없는 PNG 형식으로 업로드하는 것이 좋습니다"
+        },
+        "whatsapp_number": {
+          "label": "WhatsApp 번호"
+        },
+        "whatsapp_message": {
+          "label": "기본 메시지",
+          "info": "앱으로 리디렉션될 때 고객 키보드에 표시되는 기본 메시지"
+        },
+        "show_desktop": {
+          "label": "데스크톱에서 표시"
+        },
+        "show_mobile": {
+          "label": "모바일에서 표시"
+        },
+        "position": {
+          "header": "배치",
+          "options__1": "오른쪽 상단",
+          "options__2": "왼쪽 상단",
+          "options__3": "오른쪽 하단",
+          "options__4": "왼쪽 하단",
+          "options": "위치",
+          "margin_right": "오른쪽 여백",
+          "margin_left": "왼쪽 여백",
+          "margin_top": "위쪽 여백",
+          "margin_bottom": "아래쪽 여백"
+        }
+      }
+    },
     "colors": {
       "name": "색상",
       "settings": {

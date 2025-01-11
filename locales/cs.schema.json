@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "Logo WhatsApp",
+          "info": "Nejlepší je nahrát formát PNG bez pozadí"
+        },
+        "whatsapp_number": {
+          "label": "Vaše číslo WhatsApp"
+        },
+        "whatsapp_message": {
+          "label": "Výchozí zpráva",
+          "info": "Výchozí zpráva v klávesnici zákazníka při přesměrování do aplikace"
+        },
+        "show_desktop": {
+          "label": "Zobrazit na desktopu"
+        },
+        "show_mobile": {
+          "label": "Zobrazit na mobilu"
+        },
+        "position": {
+          "header": "Umístění",
+          "options__1": "Pravý horní roh",
+          "options__2": "Levý horní roh",
+          "options__3": "Pravý dolní roh",
+          "options__4": "Levý dolní roh",
+          "options": "Pozice",
+          "margin_right": "Pravý okraj",
+          "margin_left": "Levý okraj",
+          "margin_top": "Horní okraj",
+          "margin_bottom": "Dolní okraj"
+        }
+      }
+    },
     "colors": {
       "name": "Barvy",
       "settings": {

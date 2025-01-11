@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "โลโก้ WhatsApp",
+          "info": "แนะนำให้อัปโหลดไฟล์ PNG โดยไม่มีพื้นหลัง"
+        },
+        "whatsapp_number": {
+          "label": "หมายเลข WhatsApp ของคุณ"
+        },
+        "whatsapp_message": {
+          "label": "ข้อความเริ่มต้น",
+          "info": "ข้อความเริ่มต้นในคีย์บอร์ดของลูกค้าขณะถูกเปลี่ยนเส้นทางไปยังแอป"
+        },
+        "show_desktop": {
+          "label": "แสดงบนเดสก์ท็อป"
+        },
+        "show_mobile": {
+          "label": "แสดงบนมือถือ"
+        },
+        "position": {
+          "header": "ตำแหน่ง",
+          "options__1": "มุมขวาบน",
+          "options__2": "มุมซ้ายบน",
+          "options__3": "มุมขวาล่าง",
+          "options__4": "มุมซ้ายล่าง",
+          "options": "ตำแหน่ง",
+          "margin_right": "ระยะขอบขวา",
+          "margin_left": "ระยะขอบซ้าย",
+          "margin_top": "ระยะขอบบน",
+          "margin_bottom": "ระยะขอบล่าง"
+        }
+      }
+    },
     "colors": {
       "name": "สี",
       "settings": {

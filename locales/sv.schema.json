@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp-logotyp",
+          "info": "Det är bäst att ladda upp en PNG-fil utan bakgrund"
+        },
+        "whatsapp_number": {
+          "label": "Ditt WhatsApp-nummer"
+        },
+        "whatsapp_message": {
+          "label": "Standardmeddelande",
+          "info": "Standardmeddelandet på kundens tangentbord när de omdirigeras till appen"
+        },
+        "show_desktop": {
+          "label": "Visa på skrivbord"
+        },
+        "show_mobile": {
+          "label": "Visa på mobil"
+        },
+        "position": {
+          "header": "Placering",
+          "options__1": "Högst upp till höger",
+          "options__2": "Högst upp till vänster",
+          "options__3": "Längst ner till höger",
+          "options__4": "Längst ner till vänster",
+          "options": "Position",
+          "margin_right": "Höger marginal",
+          "margin_left": "Vänster marginal",
+          "margin_top": "Övre marginal",
+          "margin_bottom": "Nedre marginal"
+        }
+      }
+    },
     "colors": {
       "name": "Färger",
       "settings": {

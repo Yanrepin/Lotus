@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp-logo",
+          "info": "Det er bedst at uploade i PNG-format uden baggrund"
+        },
+        "whatsapp_number": {
+          "label": "Dit WhatsApp-nummer"
+        },
+        "whatsapp_message": {
+          "label": "Standardbesked",
+          "info": "Standardbeskeden i kundens tastatur, når der omdirigeres til appen"
+        },
+        "show_desktop": {
+          "label": "Vis på desktop"
+        },
+        "show_mobile": {
+          "label": "Vis på mobil"
+        },
+        "position": {
+          "header": "Placering",
+          "options__1": "Højre top",
+          "options__2": "Venstre top",
+          "options__3": "Højre bund",
+          "options__4": "Venstre bund",
+          "options": "Position",
+          "margin_right": "Højre margen",
+          "margin_left": "Venstre margen",
+          "margin_top": "Øvre margen",
+          "margin_bottom": "Nedre margen"
+        }
+      }
+    },
     "colors": {
       "name": "Farver",
       "settings": {

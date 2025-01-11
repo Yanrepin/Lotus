@@ -368,6 +368,40 @@
           "label": "Vertical space"
         }
       }
+    },
+    "whatsapp":{
+      "name":"WhatsApp",
+      "settings":{
+        "whatsapp_logo":{
+          "label":"WhatsApp logo",
+          "info":"Better to upload PNG format without background"
+        },
+        "whatsapp_number":{
+          "label":"Your WhatsApp number"
+        },
+        "whatsapp_message":{
+          "label":"Defualt message",
+          "info": "The defualt message in customer keyboard when rediracted to the app"
+        },
+        "show_desktop":{
+          "label":"Show on desktop"
+        },
+        "show_mobile":{
+          "label":"Show on mobile"
+        },
+        "position":{
+          "header":"Placement",
+          "options__1":"Right Top",
+          "options__2":"Left Top",
+          "options__3":"Right Bottom",
+          "options__4":"Left Bottom",
+          "options":"Position",
+          "margin_right":"Margin right",
+          "margin_left":"Margin left",
+          "margin_top":"Margin top",
+          "margin_bottom":"Margin bottom"
+        }
+      }
     }
   },
   "sections": {

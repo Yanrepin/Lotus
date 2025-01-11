@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp-logo",
+          "info": "On suositeltavaa ladata PNG-muodossa ilman taustaa"
+        },
+        "whatsapp_number": {
+          "label": "WhatsApp-numero"
+        },
+        "whatsapp_message": {
+          "label": "Oletusviesti",
+          "info": "Oletusviesti asiakkaan näppäimistössä, kun hänet ohjataan sovellukseen"
+        },
+        "show_desktop": {
+          "label": "Näytä työpöydällä"
+        },
+        "show_mobile": {
+          "label": "Näytä mobiilissa"
+        },
+        "position": {
+          "header": "Sijoittelu",
+          "options__1": "Oikea yläkulma",
+          "options__2": "Vasen yläkulma",
+          "options__3": "Oikea alakulma",
+          "options__4": "Vasen alakulma",
+          "options": "Sijainti",
+          "margin_right": "Oikea marginaali",
+          "margin_left": "Vasen marginaali",
+          "margin_top": "Yläreuna",
+          "margin_bottom": "Alareuna"
+        }
+      }
+    },
     "colors": {
       "name": "Värit",
       "settings": {

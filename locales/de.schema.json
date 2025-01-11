@@ -1,5 +1,39 @@
 {
   "settings_schema": {
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_logo": {
+          "label": "WhatsApp-Logo",
+          "info": "Am besten im PNG-Format ohne Hintergrund hochladen"
+        },
+        "whatsapp_number": {
+          "label": "Ihre WhatsApp-Nummer"
+        },
+        "whatsapp_message": {
+          "label": "Standardnachricht",
+          "info": "Die Standardnachricht in der Kunden-Tastatur, wenn zur App weitergeleitet wird"
+        },
+        "show_desktop": {
+          "label": "Auf dem Desktop anzeigen"
+        },
+        "show_mobile": {
+          "label": "Auf dem Mobilgerät anzeigen"
+        },
+        "position": {
+          "header": "Platzierung",
+          "options__1": "Rechts oben",
+          "options__2": "Links oben",
+          "options__3": "Rechts unten",
+          "options__4": "Links unten",
+          "options": "Position",
+          "margin_right": "Rechter Rand",
+          "margin_left": "Linker Rand",
+          "margin_top": "Oberer Rand",
+          "margin_bottom": "Unterer Rand"
+        }
+      }
+    },
     "colors": {
       "name": "Farben",
       "settings": {
