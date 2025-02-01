@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Mellanrum mellan mallavsnitt"
         },
+        "right_to_left": {
+          "label": "Höger till vänster"
+        },
         "header__grid": {
           "content": "Rutnät"
         },

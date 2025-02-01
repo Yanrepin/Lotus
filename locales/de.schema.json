@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Platz zwischen Vorlagenabschnitten"
         },
+        "right_to_left": {
+          "label": "Rechts nach Links"
+        },
         "header__grid": {
           "content": "Raster"
         },

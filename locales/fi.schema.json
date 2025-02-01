@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Tila malliosioiden välissä"
         },
+        "right_to_left": {
+          "label": "Oikealta vasemmalle"
+        },
         "header__grid": {
           "content": "Ruudukko"
         },

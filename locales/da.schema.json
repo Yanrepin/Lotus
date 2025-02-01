@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Mellemrum mellem skabelonafsnit"
         },
+        "right_to_left": {
+          "label": "Højre til venstre"
+        },
         "header__grid": {
           "content": "Gitter"
         },

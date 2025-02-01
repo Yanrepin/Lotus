@@ -355,6 +355,9 @@
         "spacing_sections": {
           "label": "Space between template sections"
         },
+        "right_to_left": {
+          "label": "Right to Left"
+        },
         "header__grid": {
           "content": "Grid"
         },

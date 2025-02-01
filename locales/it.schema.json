@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Spazio tra le sezioni del modello"
         },
+        "right_to_left": {
+          "label": "Da destra a sinistra"
+        },
         "header__grid": {
           "content": "Griglia"
         },

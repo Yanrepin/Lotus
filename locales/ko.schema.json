@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "템플릿 섹션 사이 간격"
         },
+        "right_to_left": {
+          "label": "오른쪽에서 왼쪽으로"
+        },
         "header__grid": {
           "content": "그리드"
         },

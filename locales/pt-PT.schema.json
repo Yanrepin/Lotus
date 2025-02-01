@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Espaço entre as secções do modelo"
         },
+        "right_to_left": {
+          "label": "Da direita para a esquerda"
+        },
         "header__grid": {
           "content": "Grelha"
         },

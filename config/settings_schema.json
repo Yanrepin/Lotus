@@ -172,6 +172,12 @@
         "default": 0
       },
       {
+        "type": "checkbox",
+        "id": "right_to_left",
+        "label": "t:settings_schema.layout.settings.right_to_left.label",
+        "default": false
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.layout.settings.header__grid.content"
       },

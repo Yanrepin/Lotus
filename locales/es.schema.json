@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Espacio entre las secciones de la plantilla"
         },
+        "right_to_left": {
+          "label": "De derecha a izquierda"
+        },
         "header__grid": {
           "content": "Cuadrícula"
         },

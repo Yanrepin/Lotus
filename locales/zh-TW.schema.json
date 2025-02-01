@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "範本區段間的間距"
         },
+        "right_to_left": {
+          "label": "從右到左"
+        },
         "header__grid": {
           "content": "網格"
         },

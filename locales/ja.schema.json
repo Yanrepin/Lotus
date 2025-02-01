@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "セクション間のスペース"
         },
+        "right_to_left": {
+          "label": "右から左"
+        },
         "header__grid": {
           "content": "グリッド"
         },

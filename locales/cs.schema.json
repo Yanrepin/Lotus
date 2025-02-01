@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Mezera mezi sekcemi šablony"
         },
+        "right_to_left": {
+          "label": "Zprava doleva"
+        },
         "header__grid": {
           "content": "Mřížka"
         },

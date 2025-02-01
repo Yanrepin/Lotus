@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Odstęp między sekcjami szablonu"
         },
+        "right_to_left": {
+          "label": "Z prawej do lewej"
+        },
         "header__grid": {
           "content": "Siatka"
         },

@@ -149,6 +149,9 @@
         "spacing_sections": {
           "label": "Ruimte tussen secties in een template"
         },
+        "right_to_left": {
+          "label": "Van rechts naar links"
+        },
         "header__grid": {
           "content": "Grid"
         },
