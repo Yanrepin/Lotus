@@ -9,7 +9,9 @@ product-info {
 .product.grid {
   gap: 0;
 }
-
+.active-rtl .grid__item{
+  padding-left:10px;
+}
 .product--no-media {
   max-width: 57rem;
   margin: 0 auto;
