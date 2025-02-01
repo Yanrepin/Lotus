@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Esquema de cores do selo de esgotado"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Opção de selo de venda",
+          "options__1": "Etiqueta de venda",
+          "options__2": "Diferença de preço",
+          "options__3": "Porcentagem de desconto"
         }
       }
     },

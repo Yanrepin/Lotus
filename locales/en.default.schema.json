@@ -108,6 +108,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Sold out badge color scheme"
+        },
+        "sale_badge_sale_badge_option":{
+          "label":"Sale Badge option",
+          "options__1":"Sale Label",
+          "options__2":"Price Difference",
+          "options__3":"Discount Percentage"
         }
       }
     },

@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Schema colori per badge esaurito"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Opzione badge di vendita",
+          "options__1": "Etichetta di vendita",
+          "options__2": "Differenza di prezzo",
+          "options__3": "Percentuale di sconto"
         }
       }
     },

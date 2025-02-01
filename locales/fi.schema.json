@@ -265,6 +265,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Loppuunmyyty-tunnuksen värimalli"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Alennusmerkki-vaihtoehto",
+          "options__1": "Alennusetiketti",
+          "options__2": "Hintaero",
+          "options__3": "Alennusprosentti"
         }
       }
     },

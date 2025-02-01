@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Esquema de color de emblema de agotado"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Opción de insignia de venta",
+          "options__1": "Etiqueta de venta",
+          "options__2": "Diferencia de precio",
+          "options__3": "Porcentaje de descuento"
         }
       }
     },

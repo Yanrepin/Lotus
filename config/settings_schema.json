@@ -1261,6 +1261,26 @@
         "default": 40
       },
       {
+        "type": "select",
+        "id": "sale_badge_option",
+        "label": "t:settings_schema.badges.settings.sale_badge_sale_badge_option.label",
+        "options": [
+          {
+            "value": "sale label",
+            "label": "t:settings_schema.badges.settings.sale_badge_sale_badge_option.options__1"
+          },
+          {
+            "value": "price difference",
+            "label": "t:settings_schema.badges.settings.sale_badge_sale_badge_option.options__2"
+          },
+          {
+            "value": "discount percentage",
+            "label": "t:settings_schema.badges.settings.sale_badge_sale_badge_option.options__3"
+          }
+        ],
+        "default": "sale label"
+      },
+      {
         "type": "color_scheme",
         "id": "sale_badge_color_scheme",
         "label": "t:settings_schema.badges.settings.sale_badge_color_scheme.label",

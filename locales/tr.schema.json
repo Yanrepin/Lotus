@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Tükendi rozeti renk şeması"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Satış rozeti seçeneği",
+          "options__1": "Satış etiketi",
+          "options__2": "Fiyat farkı",
+          "options__3": "İndirim yüzdesi"
         }
       }
     },

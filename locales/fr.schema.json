@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Nuancier de couleurs du badge de rupture de stock"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Option de badge de vente",
+          "options__1": "Étiquette de vente",
+          "options__2": "Différence de prix",
+          "options__3": "Pourcentage de réduction"
         }
       }
     },

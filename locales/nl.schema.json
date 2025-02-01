@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Kleurschema uitverkocht-badge"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Verkoopbadge-optie",
+          "options__1": "Verkooplabel",
+          "options__2": "Prijsverschil",
+          "options__3": "Kortingspercentage"
         }
       }
     },

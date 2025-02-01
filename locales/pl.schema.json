@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Kolorystyka znaczków Wyprzedane"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Opcja odznaki wyprzedaży",
+          "options__1": "Etykieta wyprzedaży",
+          "options__2": "Różnica ceny",
+          "options__3": "Procent rabatu"
         }
       }
     },

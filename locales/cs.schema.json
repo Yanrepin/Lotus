@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Barevné schéma odznaku Vyprodáno"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Možnost označení slevy",
+          "options__1": "Štítek slevy",
+          "options__2": "Cena rozdílu",
+          "options__3": "Procento slevy"
         }
       }
     },

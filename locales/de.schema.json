@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Farbschema für Ausverkauft-Badges"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Verkaufsabzeichen-Option",
+          "options__1": "Verkaufslabel",
+          "options__2": "Preisunterschied",
+          "options__3": "Rabattprozentsatz"
         }
       }
     },

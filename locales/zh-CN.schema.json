@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "售罄徽章配色方案"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "促销标签选项",
+          "options__1": "促销标签",
+          "options__2": "价格差异",
+          "options__3": "折扣百分比"
         }
       }
     },

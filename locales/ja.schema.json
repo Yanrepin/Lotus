@@ -265,6 +265,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "完売バッジの配色"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "セールバッジオプション",
+          "options__1": "セールラベル",
+          "options__2": "価格差",
+          "options__3": "割引率"
         }
       }
     },

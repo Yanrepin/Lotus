@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "Utsålt färgschema för bricka"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "Försäljningsmärke alternativ",
+          "options__1": "Försäljningsetikett",
+          "options__2": "Pris skillnad",
+          "options__3": "Rabattprocent"
         }
       }
     },

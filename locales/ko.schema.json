@@ -251,6 +251,12 @@
         },
         "sold_out_badge_color_scheme": {
           "label": "품절 배지 색상 체계"
+        },
+        "sale_badge_sale_badge_option": {
+          "label": "세일 배지 옵션",
+          "options__1": "세일 라벨",
+          "options__2": "가격 차이",
+          "options__3": "할인 비율"
         }
       }
     },
