@@ -137,7 +137,21 @@
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
               >
-                {{- 'products.product.on_sale' | t -}}
+                {%- if settings.sale_badge_option == 'sale label' -%}
+                  {{- 'products.product.on_sale' | t -}}
+                {%- elsif settings.sale_badge_option == 'price difference' -%}
+                  - {{ card_product.compare_at_price | minus: card_product.price | money }}
+                {%- elsif settings.sale_badge_option == 'discount percentage' -%}
+                  {% assign discount_value = card_product.compare_at_price | minus: card_product.price %}
+                  {% assign compare_at_price_float = card_product.compare_at_price | times: 1.0 %}
+                  {% assign discount_percentage = discount_value
+                    | divided_by: compare_at_price_float
+                    | times: 100
+                    | round: 0
+                  %}
+
+                  {{ discount_percentage }}%
+                {%- endif -%}
               </span>
             {%- endif -%}
           </div>
