@@ -1,4 +1,8 @@
 # new theme based on shopify Dawn theme
+
+## locally run
+- shopify theme dev 
+
 ## new features:
 ### sections:
 - infinity scroll on collections when switch is on at the product grid component
