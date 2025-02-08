@@ -3470,7 +3470,30 @@
       "product": "Tuote",
       "horizontal_position": "Vaakasuora sijainti",
       "vertical_position": "Pystysuora sijainti"
-    }
+    },
+    "countdown": {
+      "style_header": "Tyyli",
+      "text_alignment": "Tekstin tasaus",
+      "text_alignment_left": "Vasemmalle",
+      "text_alignment_center": "Keskitetty",
+      "text_alignment_right": "Oikealle",
+      "setup_header": "Ajastimen asetukset",
+      "date_label": "Ajastimen päättymispäivä (YYYY-MM-DD)",
+      "time_label": "Ajastimen päättymisaika (MM:HH)",
+      "show_header": "Näytä otsikko",
+      "header_text": "Otsikkoteksti",
+      "show_description": "Näytä kuvaus",
+      "description_text": "Kuvausteksti",
+      "show_button": "Näytä painike",
+      "button_text": "Painikkeen teksti",
+      "button_link": "Painikkeen linkki",
+      "ends_header": "Päättymisen jälkeen",
+      "ends": "Kun ajastin päättyy",
+      "ends_show_text": "Näytä teksti",
+      "ends_hide_section": "Piilota osio",
+      "ends_text": "Teksti ajastimen päätyttyä"
+    },
+
 
   }
 }

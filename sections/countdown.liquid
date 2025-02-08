@@ -1,0 +1,169 @@
+{% comment %} CSS files {% endcomment %}
+<style>
+  :root {
+    {% comment %} --spot-color: {{ section.settings.spot }}; {% endcomment %}
+  }
+</style>
+{{ 'countdown.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="
+    countdown-timer
+    {% if section.settings.countdown_ends=="showtext"%}show-text-on-end{%else%}hide-section{%- endif -%}
+    {% if section.settings.countdown_alignment=="left"%} left{%- endif -%}
+    {% if section.settings.countdown_alignment=="center"%} center{%- endif -%}
+    {% if section.settings.countdown_alignment=="right"%} right{%- endif -%}
+  "
+>
+  {%- if section.settings.countdown_show_header -%}
+    <div class="countdown-header">{{ section.settings.countdown_header_text }}</div>
+  {%- endif -%}
+  {%- if section.settings.countdown_show_description -%}
+    <div class="countdown-description">{{ section.settings.countdown_description_text }}</div>
+  {%- endif -%}
+  {%- if section.settings.countdown_show_button -%}
+    <button href="{{ section.settings.countdown_button_link }}" alt="counte down link" class="countdown-button">
+      {{- section.settings.countdown_button_text -}}
+    </button>
+  {%- endif -%}
+
+  <div class="countdown">
+    <div class="countdown_square">
+      <div class="countdown_number">
+        <span class="countdown_days h4">01</span>
+        <span class="countdown_label">Days</span>
+      </div>
+    </div>
+    <div class="countdown_square">
+      <div class="countdown_number">
+        <span class="countdown_hours h4">06</span>
+        <span class="countdown_label">Hours</span>
+      </div>
+    </div>
+    <div class="countdown_square">
+      <div class="countdown_number">
+        <span class="countdown_minutes h4">06</span>
+        <span class="countdown_label">Minutes</span>
+      </div>
+    </div>
+    <div class="countdown_square">
+      <div class="countdown_number">
+        <span class="countdown_seconds h4">09</span>
+        <span class="countdown_label">Seconds</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Countdown",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.countdown.style_header"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "#scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "countdown_alignment",
+      "label": "t:sections.countdown.text_alignment",
+      "options": [
+        { "value": "left", "label": "t:sections.countdown.text_alignment_left" },
+        { "value": "center", "label": "t:sections.countdown.text_alignment_center" },
+        { "value": "right", "label": "t:sections.countdown.text_alignment_right" }
+      ],
+      "default": "center"
+    },
+
+    {
+      "type": "header",
+      "content": "t:sections.countdown.setup_header"
+    },
+    {
+      "type": "text",
+      "id": "countdown_date",
+      "label": "t:sections.countdown.date_label",
+      "default": "2025-12-31"
+    },
+    {
+      "type": "text",
+      "id": "countdown_time",
+      "label": "t:sections.countdown.time_label",
+      "default": "00:00"
+    },
+    {
+      "type": "checkbox",
+      "id": "countdown_show_header",
+      "label": "t:sections.countdown.show_header",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "countdown_header_text",
+      "label": "t:sections.countdown.header_text",
+      "default": "<h2>t:sections.countdown.header_text</h2>"
+    },
+    {
+      "type": "checkbox",
+      "id": "countdown_show_description",
+      "label": "t:sections.countdown.show_description",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "countdown_description_text",
+      "label": "t:sections.countdown.description_text",
+      "default": "<p>t:sections.countdown.description_text</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "countdown_show_button",
+      "label": "t:sections.countdown.show_button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "countdown_button_text",
+      "label": "t:sections.countdown.button_text",
+      "default": "t:sections.countdown.button_text"
+    },
+    {
+      "type": "url",
+      "id": "countdown_button_link",
+      "label": "t:sections.countdown.button_link"
+    },
+
+    {
+      "type": "header",
+      "content": "t:sections.countdown.ends_header"
+    },
+    {
+      "type": "select",
+      "id": "countdown_ends",
+      "label": "t:sections.countdown.ends",
+      "options": [
+        { "value": "showtext", "label": "t:sections.countdown.ends_show_text" },
+        { "value": "hide", "label": "t:sections.countdown.ends_hide_section" }
+      ],
+      "default": "showtext"
+    },
+    {
+      "type": "richtext",
+      "id": "countdown_ends_text",
+      "label": "t:sections.countdown.ends_text",
+      "default": "<p>t:sections.countdown.ends_text</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown"
+    }
+  ]
+}
+{% endschema %}

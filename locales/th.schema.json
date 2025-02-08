@@ -3470,7 +3470,30 @@
       "product": "สินค้า",
       "horizontal_position": "ตำแหน่งแนวนอน",
       "vertical_position": "ตำแหน่งแนวตั้ง"
-    }
+    },
+    "countdown": {
+      "style_header": "สไตล์",
+      "text_alignment": "การจัดตำแหน่งข้อความ",
+      "text_alignment_left": "ซ้าย",
+      "text_alignment_center": "กลาง",
+      "text_alignment_right": "ขวา",
+      "setup_header": "การตั้งค่าเวลา",
+      "date_label": "วันที่สิ้นสุดการนับถอยหลัง (YYYY-MM-DD)",
+      "time_label": "เวลาสิ้นสุดการนับถอยหลัง (MM:HH)",
+      "show_header": "แสดงหัวข้อ",
+      "header_text": "ข้อความหัวข้อ",
+      "show_description": "แสดงคำอธิบาย",
+      "description_text": "ข้อความคำอธิบาย",
+      "show_button": "แสดงปุ่ม",
+      "button_text": "ข้อความปุ่ม",
+      "button_link": "ลิงก์ปุ่ม",
+      "ends_header": "หลังจากสิ้นสุด",
+      "ends": "หลังจากที่ตัวจับเวลาหมดเวลา",
+      "ends_show_text": "แสดงข้อความ",
+      "ends_hide_section": "ซ่อนส่วน",
+      "ends_text": "ข้อความหลังจากที่ตัวจับเวลาหมดเวลา"
+    },
+
 
   }
 }

@@ -3470,7 +3470,30 @@
       "product": "製品",
       "horizontal_position": "水平方向の位置",
       "vertical_position": "垂直方向の位置"
+    },
+    "countdown": {
+      "style_header": "スタイル",
+      "text_alignment": "テキストの配置",
+      "text_alignment_left": "左",
+      "text_alignment_center": "中央",
+      "text_alignment_right": "右",
+      "setup_header": "タイマー設定",
+      "date_label": "カウントダウン終了日 (YYYY-MM-DD)",
+      "time_label": "カウントダウン終了時間 (MM:HH)",
+      "show_header": "ヘッダーを表示",
+      "header_text": "ヘッダーテキスト",
+      "show_description": "説明を表示",
+      "description_text": "説明テキスト",
+      "show_button": "ボタンを表示",
+      "button_text": "ボタンのテキスト",
+      "button_link": "ボタンのリンク",
+      "ends_header": "終了後",
+      "ends": "タイマー終了後",
+      "ends_show_text": "テキストを表示",
+      "ends_hide_section": "セクションを非表示",
+      "ends_text": "タイマー終了後のテキスト"
     }
+
 
   }
 }

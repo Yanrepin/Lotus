@@ -3470,7 +3470,30 @@
       "product": "Produkt",
       "horizontal_position": "Pozycja pozioma",
       "vertical_position": "Pozycja pionowa"
+    },
+    "countdown": {
+      "style_header": "Styl",
+      "text_alignment": "Wyrównanie tekstu",
+      "text_alignment_left": "Lewo",
+      "text_alignment_center": "Środek",
+      "text_alignment_right": "Prawo",
+      "setup_header": "Ustawienia timera",
+      "date_label": "Data zakończenia odliczania (YYYY-MM-DD)",
+      "time_label": "Czas zakończenia odliczania (MM:HH)",
+      "show_header": "Pokaż nagłówek",
+      "header_text": "Tekst nagłówka",
+      "show_description": "Pokaż opis",
+      "description_text": "Tekst opisu",
+      "show_button": "Pokaż przycisk",
+      "button_text": "Tekst przycisku",
+      "button_link": "Link przycisku",
+      "ends_header": "Po zakończeniu",
+      "ends": "Po zakończeniu timera",
+      "ends_show_text": "Pokaż tekst",
+      "ends_hide_section": "Ukryj sekcję",
+      "ends_text": "Tekst po zakończeniu timera"
     }
+
 
   }
 }

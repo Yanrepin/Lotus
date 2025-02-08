@@ -3470,6 +3470,28 @@
       "product": "Product",
       "horizontal_position": "Horizontal position",
       "vertical_position": "Vertical position"
+    },
+    "countdown":{
+      "style_header":"Style",
+      "text_alignment":"Text Alignment",
+      "text_alignment_left":"Left",
+      "text_alignment_center":"Center",
+      "text_alignment_right":"Right",
+      "setup_header":"Timer Setup",
+      "date_label":"Countdown End Date (YYYY-MM-DD)",
+      "time_label":"Countdown End Time (MM:HH)",
+      "show_header":"Show Header",
+      "header_text":"Header Text",
+      "show_description":"Show Description",
+      "description_text":"Description Text",
+      "show_button":"Show Button",
+      "button_text":"Button Text",
+      "button_link":"Button Link",
+      "ends_header":"After End",
+      "ends":"After The Timer Ends",
+      "ends_show_text":"Show Text",
+      "ends_hide_section":"Hide Section",
+      "ends_text":"Text After The Timer Ends"
     }
   }
 }

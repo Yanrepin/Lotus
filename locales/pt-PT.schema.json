@@ -3470,7 +3470,30 @@
       "product": "Produto",
       "horizontal_position": "Posição horizontal",
       "vertical_position": "Posição vertical"
-    }
+    },
+    "countdown": {
+      "style_header": "Estilo",
+      "text_alignment": "Alinhamento do texto",
+      "text_alignment_left": "Esquerda",
+      "text_alignment_center": "Centro",
+      "text_alignment_right": "Direita",
+      "setup_header": "Configuração do temporizador",
+      "date_label": "Data de fim da contagem regressiva (YYYY-MM-DD)",
+      "time_label": "Hora de fim da contagem regressiva (MM:HH)",
+      "show_header": "Mostrar cabeçalho",
+      "header_text": "Texto do cabeçalho",
+      "show_description": "Mostrar descrição",
+      "description_text": "Texto da descrição",
+      "show_button": "Mostrar botão",
+      "button_text": "Texto do botão",
+      "button_link": "Link do botão",
+      "ends_header": "Após o fim",
+      "ends": "Após o fim do temporizador",
+      "ends_show_text": "Mostrar texto",
+      "ends_hide_section": "Ocultar secção",
+      "ends_text": "Texto após o fim do temporizador"
+    },
+
 
   }
 }

@@ -3470,7 +3470,31 @@
       "product": "產品",
       "horizontal_position": "水平位置",
       "vertical_position": "垂直位置"
-    }   
+    },
+    "countdown": {
+      "style_header": "樣式",
+      "text_alignment": "文字對齊",
+      "text_alignment_left": "左對齊",
+      "text_alignment_center": "置中",
+      "text_alignment_right": "右對齊",
+      "setup_header": "計時器設定",
+      "date_label": "倒數結束日期 (YYYY-MM-DD)",
+      "time_label": "倒數結束時間 (MM:HH)",
+      "show_header": "顯示標題",
+      "header_text": "標題文字",
+      "show_description": "顯示描述",
+      "description_text": "描述文字",
+      "show_button": "顯示按鈕",
+      "button_text": "按鈕文字",
+      "button_link": "按鈕連結",
+      "ends_header": "結束後",
+      "ends": "倒數計時結束後",
+      "ends_show_text": "顯示文字",
+      "ends_hide_section": "隱藏區塊",
+      "ends_text": "倒數計時結束後的文字"
+    },
+
+
 
   }
 }

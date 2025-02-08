@@ -3471,5 +3471,28 @@
       "horizontal_position":"Vandret position",
       "vertical_position":"Lodret position"
     },
+    "countdown": {
+      "style_header": "Stil",
+      "text_alignment": "Tekstjustering",
+      "text_alignment_left": "Venstre",
+      "text_alignment_center": "Centreret",
+      "text_alignment_right": "Højre",
+      "setup_header": "Timeropsætning",
+      "date_label": "Nedtællingens slutdato (YYYY-MM-DD)",
+      "time_label": "Nedtællingens sluttidspunkt (MM:HH)",
+      "show_header": "Vis overskrift",
+      "header_text": "Overskriftstekst",
+      "show_description": "Vis beskrivelse",
+      "description_text": "Beskrivelsestekst",
+      "show_button": "Vis knap",
+      "button_text": "Knaptekst",
+      "button_link": "Knaplink",
+      "ends_header": "Efter afslutning",
+      "ends": "Efter timeren slutter",
+      "ends_show_text": "Vis tekst",
+      "ends_hide_section": "Skjul sektion",
+      "ends_text": "Tekst efter timerens afslutning"
+    },
+
   }
 }

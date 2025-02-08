@@ -3470,7 +3470,30 @@
       "product": "Ürün",
       "horizontal_position": "Yatay konum",
       "vertical_position": "Dikey konum"
-    }
+    },
+    "countdown": {
+      "style_header": "Stil",
+      "text_alignment": "Metin Hizalama",
+      "text_alignment_left": "Sola",
+      "text_alignment_center": "Ortada",
+      "text_alignment_right": "Sağa",
+      "setup_header": "Zamanlayıcı Ayarları",
+      "date_label": "Geri Sayım Bitiş Tarihi (YYYY-MM-DD)",
+      "time_label": "Geri Sayım Bitiş Saati (MM:HH)",
+      "show_header": "Başlığı Göster",
+      "header_text": "Başlık Metni",
+      "show_description": "Açıklamayı Göster",
+      "description_text": "Açıklama Metni",
+      "show_button": "Butonu Göster",
+      "button_text": "Buton Metni",
+      "button_link": "Buton Bağlantısı",
+      "ends_header": "Bittikten Sonra",
+      "ends": "Zamanlayıcı Bittiğinde",
+      "ends_show_text": "Metni Göster",
+      "ends_hide_section": "Bölümü Gizle",
+      "ends_text": "Zamanlayıcı Bittiğinde Metin"
+    },
+
 
   }
 }

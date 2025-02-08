@@ -3470,7 +3470,30 @@
       "product": "Prodotto",
       "horizontal_position": "Posizione orizzontale",
       "vertical_position": "Posizione verticale"
-    }
+    },
+    "countdown": {
+      "style_header": "Stile",
+      "text_alignment": "Allineamento del testo",
+      "text_alignment_left": "Sinistra",
+      "text_alignment_center": "Centrato",
+      "text_alignment_right": "Destra",
+      "setup_header": "Impostazioni del timer",
+      "date_label": "Data di fine del conto alla rovescia (YYYY-MM-DD)",
+      "time_label": "Orario di fine del conto alla rovescia (MM:HH)",
+      "show_header": "Mostra intestazione",
+      "header_text": "Testo dell'intestazione",
+      "show_description": "Mostra descrizione",
+      "description_text": "Testo della descrizione",
+      "show_button": "Mostra pulsante",
+      "button_text": "Testo del pulsante",
+      "button_link": "Link del pulsante",
+      "ends_header": "Dopo la fine",
+      "ends": "Dopo la fine del timer",
+      "ends_show_text": "Mostra testo",
+      "ends_hide_section": "Nascondi sezione",
+      "ends_text": "Testo dopo la fine del timer"
+    },
+
 
   }
 }

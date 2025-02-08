@@ -3470,7 +3470,30 @@
       "product": "제품",
       "horizontal_position": "수평 위치",
       "vertical_position": "수직 위치"
-    }
+    },
+    "countdown": {
+      "style_header": "스타일",
+      "text_alignment": "텍스트 정렬",
+      "text_alignment_left": "왼쪽",
+      "text_alignment_center": "가운데",
+      "text_alignment_right": "오른쪽",
+      "setup_header": "타이머 설정",
+      "date_label": "카운트다운 종료 날짜 (YYYY-MM-DD)",
+      "time_label": "카운트다운 종료 시간 (MM:HH)",
+      "show_header": "헤더 표시",
+      "header_text": "헤더 텍스트",
+      "show_description": "설명 표시",
+      "description_text": "설명 텍스트",
+      "show_button": "버튼 표시",
+      "button_text": "버튼 텍스트",
+      "button_link": "버튼 링크",
+      "ends_header": "종료 후",
+      "ends": "타이머 종료 후",
+      "ends_show_text": "텍스트 표시",
+      "ends_hide_section": "섹션 숨기기",
+      "ends_text": "타이머 종료 후 텍스트"
+    },
+
 
   }
 }

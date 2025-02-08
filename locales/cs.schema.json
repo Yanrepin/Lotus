@@ -3471,5 +3471,27 @@
       "horizontal_position":"Horizontální pozice",
       "vertical_position":"Vertikální pozice"
     },
+    "countdown": {
+      "style_header": "Styl",
+      "text_alignment": "Zarovnání textu",
+      "text_alignment_left": "Vlevo",
+      "text_alignment_center": "Na střed",
+      "text_alignment_right": "Vpravo",
+      "setup_header": "Nastavení časovače",
+      "date_label": "Datum ukončení odpočtu (YYYY-MM-DD)",
+      "time_label": "Čas ukončení odpočtu (MM:HH)",
+      "show_header": "Zobrazit nadpis",
+      "header_text": "Text nadpisu",
+      "show_description": "Zobrazit popis",
+      "description_text": "Text popisu",
+      "show_button": "Zobrazit tlačítko",
+      "button_text": "Text tlačítka",
+      "button_link": "Odkaz tlačítka",
+      "ends_header": "Po skončení",
+      "ends": "Po skončení časovače",
+      "ends_show_text": "Zobrazit text",
+      "ends_hide_section": "Skrýt sekci",
+      "ends_text": "Text po skončení časovače"
+    },
   }
 }

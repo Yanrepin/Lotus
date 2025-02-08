@@ -3470,7 +3470,30 @@
       "product": "Produkt",
       "horizontal_position": "Vannrett posisjon",
       "vertical_position": "Loddrett posisjon"
+    },
+    "countdown": {
+      "style_header": "Stil",
+      "text_alignment": "Tekstjustering",
+      "text_alignment_left": "Venstre",
+      "text_alignment_center": "Sentrert",
+      "text_alignment_right": "Høyre",
+      "setup_header": "Timeroppsett",
+      "date_label": "Nedtellingen slutt dato (YYYY-MM-DD)",
+      "time_label": "Nedtellingen slutt tid (MM:HH)",
+      "show_header": "Vis overskrift",
+      "header_text": "Overskriftstekst",
+      "show_description": "Vis beskrivelse",
+      "description_text": "Beskrivelsestekst",
+      "show_button": "Vis knapp",
+      "button_text": "Knappe tekst",
+      "button_link": "Knappe lenke",
+      "ends_header": "Etter slutt",
+      "ends": "Etter at timeren er ferdig",
+      "ends_show_text": "Vis tekst",
+      "ends_hide_section": "Skjul seksjon",
+      "ends_text": "Tekst etter at timeren er ferdig"
     }
+
 
   }
 }
