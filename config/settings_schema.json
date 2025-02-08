@@ -508,7 +508,7 @@
             "label": "t:settings_schema.cards.settings.style.options__2.label"
           }
         ],
-        "default": "standard",
+        "default": "card",
         "label": "t:settings_schema.cards.settings.style.label"
       },
       {
@@ -643,7 +643,7 @@
             "label": "t:settings_schema.collection_cards.settings.style.options__2.label"
           }
         ],
-        "default": "standard",
+        "default": "card",
         "label": "t:settings_schema.collection_cards.settings.style.label"
       },
       {
@@ -778,7 +778,7 @@
             "label": "t:settings_schema.blog_cards.settings.style.options__2.label"
           }
         ],
-        "default": "standard",
+        "default": "card",
         "label": "t:settings_schema.blog_cards.settings.style.label"
       },
       {

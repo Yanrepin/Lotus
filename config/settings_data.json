@@ -6,35 +6,36 @@
       "color_schemes": {
         "scheme-1": {
           "settings": {
-            "background": "#FFFFFF",
+            "background": "#f0f3f6",
             "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
+            "text": "#000",
+            "button": "#262D33",
             "button_label": "#FFFFFF",
             "secondary_button_label": "#121212",
-            "shadow": "#121212"
+            "shadow": "",
+            "foreground":"red"
           }
         },
         "scheme-2": {
           "settings": {
-            "background": "#F3F3F3",
+            "background": "#262D33",
             "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
-            "button_label": "#F3F3F3",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
+            "text": "#FFF",
+            "button": "rgb(45, 155, 202)",
+            "button_label": "#FFF",
+            "secondary_button_label": "#FFF",
+            "shadow": ""
           }
         },
         "scheme-3": {
           "settings": {
-            "background": "#242833",
+            "background": "#FFF",
             "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#000000",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
+            "text": "#000",
+            "button": "#262D33",
+            "button_label": "#FFF",
+            "secondary_button_label": "#121212",
+            "shadow": ""
           }
         },
         "scheme-4": {
@@ -58,7 +59,18 @@
             "secondary_button_label": "#FFFFFF",
             "shadow": "#121212"
           }
-        }
+        },
+        "scheme-6": {
+          "settings": {
+            "background": "#FFFFFF",
+            "background_gradient": "",
+            "text": "#121212",
+            "button": "#121212",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#121212",
+            "shadow": "#121212"
+          }
+        },
       },
       "type_header_font": "assistant_n4",
       "heading_scale": 100,
@@ -151,7 +163,7 @@
       "drawer_shadow_blur": 5,
       "badge_position": "bottom left",
       "badge_corner_radius": 40,
-      "sale_badge_color_scheme": "scheme-5",
+      "sale_badge_color_scheme": "scheme-2",
       "sold_out_badge_color_scheme": "scheme-3",
       "social_twitter_link": "",
       "social_facebook_link": "",

@@ -549,6 +549,12 @@
 .grid__item:nth-child(8n) .shape--blob {
   clip-path: polygon(var(--shape--blob-1));
 }
+.grid__item {
+  padding: 10px;
+  border-radius: 1.4rem;
+  background: white;
+  border: 0.05rem solid #d5dde5;
+}
 
 /* Card Shape Hover Rules */
 

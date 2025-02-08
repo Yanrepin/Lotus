@@ -81,3 +81,8 @@ a.pagination__item:hover::after {
 .pagination__item-arrow:hover::after {
   display: none;
 }
+.pagination__item--current{
+  border-radius: 50%;
+  background-color: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+}
