@@ -3491,7 +3491,10 @@
       "ends": "Po skončení časovače",
       "ends_show_text": "Zobrazit text",
       "ends_hide_section": "Skrýt sekci",
-      "ends_text": "Text po skončení časovače"
+      "ends_text": "Text po skončení časovače",
+      "background_image": "Obrázek na pozadí",
+      "top_spacing": "Horní odsazení sekce",
+      "bottom_spacing": "Spodní odsazení sekce"
     },
   }
 }

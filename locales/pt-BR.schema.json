@@ -3491,7 +3491,10 @@
       "ends": "Após o término do temporizador",
       "ends_show_text": "Mostrar texto",
       "ends_hide_section": "Ocultar seção",
-      "ends_text": "Texto após o término do temporizador"
+      "ends_text": "Texto após o término do temporizador",
+      "background_image": "Imagem de fundo",
+      "top_spacing": "Espaçamento superior da seção",
+      "bottom_spacing": "Espaçamento inferior da seção"
     },
 
 

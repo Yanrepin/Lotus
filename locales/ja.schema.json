@@ -3491,7 +3491,10 @@
       "ends": "タイマー終了後",
       "ends_show_text": "テキストを表示",
       "ends_hide_section": "セクションを非表示",
-      "ends_text": "タイマー終了後のテキスト"
+      "ends_text": "タイマー終了後のテキスト",
+      "background_image": "背景画像",
+      "top_spacing": "セクションの上部余白",
+      "bottom_spacing": "セクションの下部余白"
     }
 
 

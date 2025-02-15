@@ -3491,7 +3491,10 @@
       "ends": "Kun ajastin päättyy",
       "ends_show_text": "Näytä teksti",
       "ends_hide_section": "Piilota osio",
-      "ends_text": "Teksti ajastimen päätyttyä"
+      "ends_text": "Teksti ajastimen päätyttyä",
+      "background_image": "Taustakuva",
+      "top_spacing": "Osion yläväli",
+      "bottom_spacing": "Osion alaväli"
     },
 
 

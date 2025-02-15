@@ -3491,7 +3491,10 @@
       "ends": "Nach Ablauf des Timers",
       "ends_show_text": "Text anzeigen",
       "ends_hide_section": "Sektion ausblenden",
-      "ends_text": "Text nach Ablauf des Timers"
+      "ends_text": "Text nach Ablauf des Timers",
+      "background_image": "Hintergrundbild",
+      "top_spacing": "Oberer Abstand der Sektion",
+      "bottom_spacing": "Unterer Abstand der Sektion"
     },
 
   }

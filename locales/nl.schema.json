@@ -3491,7 +3491,10 @@
       "ends": "Na afloop van de timer",
       "ends_show_text": "Toon tekst",
       "ends_hide_section": "Verberg sectie",
-      "ends_text": "Tekst na afloop van de timer"
+      "ends_text": "Tekst na afloop van de timer",
+      "background_image": "Achtergrondafbeelding",
+      "top_spacing": "Bovenste marge van sectie",
+      "bottom_spacing": "Onderste marge van sectie"
     }
 
 

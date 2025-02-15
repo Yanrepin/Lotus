@@ -1,10 +1,12 @@
 {% comment %} CSS files {% endcomment %}
 <style>
   :root {
-    {% comment %} --spot-color: {{ section.settings.spot }}; {% endcomment %}
+    --countdown-top-margin: {{ section.settings.countdown_bottom_spacing }}%;
+    --countdown-bottom-margin: {{ section.settings.countdown_top_spacing }}%;
+    --countdown-background-image:url({{ section.settings.countdown_background_image | image_url }});
   }
 </style>
-{{ 'countdown.css' | asset_url | stylesheet_tag }}
+{{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 
 <div
   class="
@@ -24,36 +26,90 @@
   {%- if section.settings.countdown_show_button -%}
     <button href="{{ section.settings.countdown_button_link }}" alt="counte down link" class="countdown-button">
       {{- section.settings.countdown_button_text -}}
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.5 10.5011L10.2421 1.75789M2.46394 1.05078H10.9492V9.53606" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"></path>
+      </svg>
     </button>
   {%- endif -%}
+
+  {% if section.settings.countdown_ends == 'showtext' %}
+    <div class="countdown-countdown_ends">{{ section.settings.countdown_ends_text }}</div>
+  {% endif %}
 
   <div class="countdown">
     <div class="countdown_square">
       <div class="countdown_number">
-        <span class="countdown_days h4">01</span>
+        <span class="countdown_days h4">00</span>
         <span class="countdown_label">Days</span>
       </div>
     </div>
     <div class="countdown_square">
       <div class="countdown_number">
-        <span class="countdown_hours h4">06</span>
+        <span class="countdown_hours h4">00</span>
         <span class="countdown_label">Hours</span>
       </div>
     </div>
     <div class="countdown_square">
       <div class="countdown_number">
-        <span class="countdown_minutes h4">06</span>
+        <span class="countdown_minutes h4">00</span>
         <span class="countdown_label">Minutes</span>
       </div>
     </div>
     <div class="countdown_square">
       <div class="countdown_number">
-        <span class="countdown_seconds h4">09</span>
+        <span class="countdown_seconds h4">00</span>
         <span class="countdown_label">Seconds</span>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const countdownDate = new Date(
+      '{{ section.settings.countdown_date }} {{ section.settings.countdown_time }}'
+    ).getTime();
+
+    const countdownTimer = document.querySelector('.countdown-timer');
+
+    // Function to update the countdown
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Update the countdown display
+      if (countdownTimer) {
+        countdownTimer.querySelector('.countdown_days').textContent = days;
+        countdownTimer.querySelector('.countdown_hours').textContent = hours;
+        countdownTimer.querySelector('.countdown_minutes').textContent = minutes;
+        countdownTimer.querySelector('.countdown_seconds').textContent = seconds;
+      }
+
+      // If the countdown ends
+      if (distance < 0) {
+        countdownTimer.querySelector('.countdown_days').textContent = '--';
+        countdownTimer.querySelector('.countdown_hours').textContent = '--';
+        countdownTimer.querySelector('.countdown_minutes').textContent = '--';
+        countdownTimer.querySelector('.countdown_seconds').textContent = '--';
+        clearInterval(timerInterval);
+        // Optionally, hide the timer or show the "ended" text
+        countdownTimer.classList.add('ended');
+      }
+    }
+
+    // Update the countdown every second
+    const timerInterval = setInterval(updateCountdown, 1000);
+
+    // Initialize the countdown
+    updateCountdown();
+  });
+</script>
 
 {% schema %}
 {
@@ -79,6 +135,29 @@
         { "value": "right", "label": "t:sections.countdown.text_alignment_right" }
       ],
       "default": "center"
+    },
+    {
+      "type": "image_picker",
+      "id": "countdown_background_image",
+      "label": "t:sections.countdown.background_image"
+    },
+    {
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "default": 0,
+      "id": "countdown_top_spacing",
+      "label": "t:sections.countdown.top_spacing"
+    },
+    {
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "default": 0,
+      "id": "countdown_bottom_spacing",
+      "label": "t:sections.countdown.bottom_spacing"
     },
 
     {
@@ -107,7 +186,7 @@
       "type": "richtext",
       "id": "countdown_header_text",
       "label": "t:sections.countdown.header_text",
-      "default": "<h2>t:sections.countdown.header_text</h2>"
+      "default": "<h2>Header</h2>"
     },
     {
       "type": "checkbox",
@@ -119,7 +198,7 @@
       "type": "richtext",
       "id": "countdown_description_text",
       "label": "t:sections.countdown.description_text",
-      "default": "<p>t:sections.countdown.description_text</p>"
+      "default": "<p>Description</p>"
     },
     {
       "type": "checkbox",
@@ -131,7 +210,7 @@
       "type": "text",
       "id": "countdown_button_text",
       "label": "t:sections.countdown.button_text",
-      "default": "t:sections.countdown.button_text"
+      "default": "Button"
     },
     {
       "type": "url",
@@ -157,7 +236,7 @@
       "type": "richtext",
       "id": "countdown_ends_text",
       "label": "t:sections.countdown.ends_text",
-      "default": "<p>t:sections.countdown.ends_text</p>"
+      "default": "<p>Time Ended Text</p>"
     }
   ],
   "presets": [

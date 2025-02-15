@@ -3491,7 +3491,10 @@
       "ends": "Après la fin du minuteur",
       "ends_show_text": "Afficher le texte",
       "ends_hide_section": "Masquer la section",
-      "ends_text": "Texte après la fin du minuteur"
+      "ends_text": "Texte après la fin du minuteur",
+      "background_image": "Image d’arrière-plan",
+      "top_spacing": "Espacement supérieur de la section",
+      "bottom_spacing": "Espacement inférieur de la section"
     },
 
 

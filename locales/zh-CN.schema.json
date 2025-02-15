@@ -3491,7 +3491,10 @@
       "ends": "倒计时结束后",
       "ends_show_text": "显示文本",
       "ends_hide_section": "隐藏部分",
-      "ends_text": "倒计时结束后的文本"
+      "ends_text": "倒计时结束后的文本",
+      "background_image": "背景图片",
+      "top_spacing": "部分顶部间距",
+      "bottom_spacing": "部分底部间距"
     },
 
 

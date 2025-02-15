@@ -3491,7 +3491,10 @@
       "ends":"After The Timer Ends",
       "ends_show_text":"Show Text",
       "ends_hide_section":"Hide Section",
-      "ends_text":"Text After The Timer Ends"
+      "ends_text":"Text After The Timer Ends",
+      "background_image":"Background Image",
+      "top_spacing":"Section Top Spacing",
+      "bottom_spacing":"Section Bottom Spacing"
     }
   }
 }

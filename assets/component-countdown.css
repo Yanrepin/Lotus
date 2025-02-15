@@ -6,6 +6,26 @@
     justify-self: center;
     width: 100%;
     background-color: rgb(var(--color-background-contrast));
+    padding:40px;
+    margin-top: var(--countdown-top-margin);
+    margin-bottom: var(--countdown-bottom-margin);
+    background-image: var(--countdown-background-image);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+.hide-section.ended{
+    display: none;
+}
+.show-text-on-end:not(.ended) .countdown-countdown_ends{
+    display: none;
+}
+.countdown-timer.ended .countdown-header,
+.countdown-timer.ended .countdown-description,
+.countdown-timer.ended .countdown-button
+{
+    display: none;
 }
 .countdown{
     position: relative;
@@ -15,6 +35,12 @@
 .countdown-button{
     background-color: rgb(var(--color-button));
     color:rgb(var(--color-button-text));
+    border-radius: 1rem;
+    gap:5px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 5px;
 }
 .countdown-header, .countdown-description{
     color: rgb(var(--color-button-text)) !important;
@@ -40,6 +66,9 @@
     text-align: center;
     gap: .4rem;
     color: rgb(var(--color-button-text));
+    min-width: 80px;
+    padding: .8rem;
+    border-radius: 1rem;
 }
 .countdown_label{
     line-height: 1.43;

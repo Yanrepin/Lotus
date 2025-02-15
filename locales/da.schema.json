@@ -3491,7 +3491,10 @@
       "ends": "Efter timeren slutter",
       "ends_show_text": "Vis tekst",
       "ends_hide_section": "Skjul sektion",
-      "ends_text": "Tekst efter timerens afslutning"
+      "ends_text": "Tekst efter timerens afslutning",
+      "background_image": "Baggrundsbillede",
+      "top_spacing": "Sektionens øverste afstand",
+      "bottom_spacing": "Sektionens nederste afstand"
     },
 
   }

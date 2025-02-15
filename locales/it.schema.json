@@ -3491,7 +3491,10 @@
       "ends": "Dopo la fine del timer",
       "ends_show_text": "Mostra testo",
       "ends_hide_section": "Nascondi sezione",
-      "ends_text": "Testo dopo la fine del timer"
+      "ends_text": "Testo dopo la fine del timer",
+      "background_image": "Immagine di sfondo",
+      "top_spacing": "Spaziatura superiore della sezione",
+      "bottom_spacing": "Spaziatura inferiore della sezione"
     },
 
 

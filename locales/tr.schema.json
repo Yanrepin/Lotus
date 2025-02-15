@@ -3491,7 +3491,10 @@
       "ends": "Zamanlayıcı Bittiğinde",
       "ends_show_text": "Metni Göster",
       "ends_hide_section": "Bölümü Gizle",
-      "ends_text": "Zamanlayıcı Bittiğinde Metin"
+      "ends_text": "Zamanlayıcı Bittiğinde Metin",
+      "background_image": "Arka Plan Görseli",
+      "top_spacing": "Bölüm Üst Boşluğu",
+      "bottom_spacing": "Bölüm Alt Boşluğu"
     },
 
 

@@ -3491,7 +3491,10 @@
       "ends": "Etter at timeren er ferdig",
       "ends_show_text": "Vis tekst",
       "ends_hide_section": "Skjul seksjon",
-      "ends_text": "Tekst etter at timeren er ferdig"
+      "ends_text": "Tekst etter at timeren er ferdig",
+      "background_image": "Bakgrunnsbilde",
+      "top_spacing": "Øvre avstand for seksjon",
+      "bottom_spacing": "Nedre avstand for seksjon"
     }
 
 
