@@ -48,6 +48,7 @@ shopify theme publish
 ### Sections:
 - Infinite scroll for collections (enabled via a toggle in the product grid component).
 - Shop The Look.
+- CountDown timer.
 ### Settings:
 - WhatsApp integration.
 - RTL support (toggle available in layout settings).
