@@ -3496,6 +3496,23 @@
       "top_spacing": "Övre avstånd för sektion",
       "bottom_spacing": "Nedre avstånd för sektion"
     },
+    "steps": {
+      "heading": "Rubrik",
+      "description": "Beskrivning",
+      "text_alignment": "Textjustering",
+      "step": {
+        "title": "Steg rubrik",
+        "description": "Steg beskrivning",
+        "image": "Bild",
+        "step_image_ratio": "Bildförhållande",
+        "content_title": "Innehållsrubrik",
+        "content_description": "Innehållsbeskrivning",
+        "show_button": "Visa knapp",
+        "button_label": "Knapptext",
+        "button_link": "Knappens länk"
+      }
+    },
+
 
 
   }

@@ -3496,6 +3496,23 @@
       "top_spacing": "Espaçamento superior da seção",
       "bottom_spacing": "Espaçamento inferior da seção"
     },
+    "steps": {
+      "heading": "Cabeçalho",
+      "description": "Descrição",
+      "text_alignment": "Alinhamento do texto",
+      "step": {
+        "title": "Título da etapa",
+        "description": "Descrição da etapa",
+        "image": "Imagem",
+        "step_image_ratio": "Proporção da imagem",
+        "content_title": "Título do conteúdo",
+        "content_description": "Descrição do conteúdo",
+        "show_button": "Mostrar botão",
+        "button_label": "Rótulo do botão",
+        "button_link": "Link do botão"
+      }
+    },
+
 
 
   }

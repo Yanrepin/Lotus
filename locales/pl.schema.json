@@ -3495,7 +3495,24 @@
       "background_image": "Obraz tła",
       "top_spacing": "Górna przestrzeń sekcji",
       "bottom_spacing": "Dolna przestrzeń sekcji"
-    }
+    },
+    "steps": {
+      "heading": "Nagłówek",
+      "description": "Opis",
+      "text_alignment": "Wyrównanie tekstu",
+      "step": {
+        "title": "Nagłówek kroku",
+        "description": "Opis kroku",
+        "image": "Obraz",
+        "step_image_ratio": "Proporcje obrazu",
+        "content_title": "Nagłówek treści",
+        "content_description": "Opis treści",
+        "show_button": "Pokaż przycisk",
+        "button_label": "Etykieta przycisku",
+        "button_link": "Link przycisku"
+      }
+    },
+
 
 
   }

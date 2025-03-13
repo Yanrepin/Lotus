@@ -3496,6 +3496,22 @@
       "top_spacing": "部分顶部间距",
       "bottom_spacing": "部分底部间距"
     },
+    "steps": {
+      "heading": "标题",
+      "description": "描述",
+      "text_alignment": "文本对齐",
+      "step": {
+        "title": "步骤标题",
+        "description": "步骤描述",
+        "image": "图片",
+        "step_image_ratio": "图片比例",
+        "content_title": "内容标题",
+        "content_description": "内容描述",
+        "show_button": "显示按钮",
+        "button_label": "按钮标签",
+        "button_link": "按钮链接"
+      }
+    },
 
 
   }

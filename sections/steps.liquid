@@ -1,0 +1,171 @@
+{% comment %} CSS files {% endcomment %}
+<style>
+  :root {
+    --steps_text_alignment: {{ section.settings.steps_text_alignment }};
+  }
+</style>
+{{ 'steps.css' | asset_url | stylesheet_tag }}
+
+{% comment %} section content {% endcomment %}
+<div class="steps">
+  <div class="stepsHeader">
+    {{ section.settings.steps_heading }}
+    {{ section.settings.steps_description }}
+  </div>
+
+  <div class="stepsBody">
+    <div class="sideScroller">
+      {% for step in section.blocks %}
+        <div class="sideStep">
+          <div>
+            {{ step.settings.step_title }}
+          </div>
+          <div>
+            {{ step.settings.step_description }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="stepsContent">
+      {% for step in section.blocks %}
+        <div class="stepContent">
+          <div>
+            {{ step.settings.step_content_title }}
+          </div>
+          <div>
+            {{ step.settings.step_content_description }}
+          </div>
+          {% if step.settings.step_show_button %}
+            <a href="{{ step.settings.step_button_link }}">
+              {{ step.settings.step_button_label }}
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Steps",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Steps"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "#scheme-1"
+    },
+    {
+      "type": "richtext",
+      "id": "steps_heading",
+      "label": "t:sections.steps.heading"
+    },
+    {
+      "type": "textarea",
+      "id": "steps_description",
+      "label": "t:sections.steps.description"
+    },
+    {
+      "type": "text_alignment",
+      "id": "steps_text_alignment",
+      "label": "t:sections.steps.text_alignment",
+      "default": "left"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_title",
+          "label": "t:sections.steps.step.title",
+          "default": "t:sections.steps.step.title"
+        },
+        {
+          "type": "textarea",
+          "id": "step_description",
+          "label": "t:sections.steps.step.description",
+          "default": "t:sections.steps.step.description"
+        },
+        {
+          "type": "image_picker",
+          "id": "step_image",
+          "label": "t:sections.steps.step.image"
+        },
+        {
+          "type": "select",
+          "id": "step_image_ratio",
+          "label": "t:sections.steps.step.step_image_ratio",
+          "options": [
+            { "value": "1/1", "label": "1/1" },
+            { "value": "2/1", "label": "2/1" },
+            { "value": "3/2", "label": "3/2" },
+            { "value": "3/4", "label": "3/4" },
+            { "value": "4/5", "label": "4/5" },
+            { "value": "16/9", "label": "16/9" },
+            { "value": "21/9", "label": "21/9" },
+            { "value": "adapt", "label": "Adapt to image" }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "step_content_title",
+          "label": "t:sections.steps.step.content_title",
+          "default": "t:sections.steps.step.content_title"
+        },
+        {
+          "type": "richtext",
+          "id": "step_content_description",
+          "label": "t:sections.steps.step.content_description",
+          "default": "t:sections.steps.step.content_description"
+        },
+        {
+          "type": "checkbox",
+          "id": "step_show_button",
+          "label": "t:sections.steps.step.show_button",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "step_button_label",
+          "label": "t:sections.steps.step.button_label",
+          "default": "t:sections.steps.step.button_label"
+        },
+        {
+          "type": "url",
+          "id": "step_button_link",
+          "label": "t:sections.steps.step.button_link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Steps",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "step_title": "Step 1",
+            "step_description": "Description of the first step."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "step_title": "Step 2",
+            "step_description": "Description of the second step."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -3496,6 +3496,23 @@
       "top_spacing": "Oberer Abstand der Sektion",
       "bottom_spacing": "Unterer Abstand der Sektion"
     },
+    "steps": {
+      "heading": "Überschrift",
+      "description": "Beschreibung",
+      "text_alignment": "Textausrichtung",
+      "step": {
+        "title": "Schrittüberschrift",
+        "description": "Schrittbeschreibung",
+        "image": "Bild",
+        "step_image_ratio": "Seitenverhältnis des Bildes",
+        "content_title": "Inhaltsüberschrift",
+        "content_description": "Inhaltsbeschreibung",
+        "show_button": "Schaltfläche anzeigen",
+        "button_label": "Schaltflächenbeschriftung",
+        "button_link": "Schaltflächenlink"
+      }
+    }
+
 
   }
 }

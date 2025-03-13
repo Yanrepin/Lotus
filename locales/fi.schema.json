@@ -3496,6 +3496,23 @@
       "top_spacing": "Osion yläväli",
       "bottom_spacing": "Osion alaväli"
     },
+    "steps": {
+      "heading": "Otsikko",
+      "description": "Kuvaus",
+      "text_alignment": "Tekstin tasaus",
+      "step": {
+        "title": "Vaiheen otsikko",
+        "description": "Vaiheen kuvaus",
+        "image": "Kuva",
+        "step_image_ratio": "Kuvan kuvasuhde",
+        "content_title": "Sisällön otsikko",
+        "content_description": "Sisällön kuvaus",
+        "show_button": "Näytä painike",
+        "button_label": "Painikkeen teksti",
+        "button_link": "Painikkeen linkki"
+      }
+    },
+
 
 
   }

@@ -3496,6 +3496,23 @@
       "top_spacing": "Espacement supérieur de la section",
       "bottom_spacing": "Espacement inférieur de la section"
     },
+    "steps": {
+      "heading": "Titre",
+      "description": "Description",
+      "text_alignment": "Alignement du texte",
+      "step": {
+        "title": "Titre de l'étape",
+        "description": "Description de l'étape",
+        "image": "Image",
+        "step_image_ratio": "Ratio de l'image",
+        "content_title": "Titre du contenu",
+        "content_description": "Description du contenu",
+        "show_button": "Afficher le bouton",
+        "button_label": "Texte du bouton",
+        "button_link": "Lien du bouton"
+      }
+    },
+
 
 
   }

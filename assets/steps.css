@@ -1,0 +1,32 @@
+.steps{
+    width: 100%;
+    max-height:1200px;
+    max-width:var(--page-width);
+    justify-self: center;
+}
+.stepsHeader{
+    text-align: var(--steps_text_alignment);
+    width: 100%;
+}
+.stepsBody{
+    display: flex;
+    gap: 50px;
+}
+.stepsContent{
+    border-left: 1px solid black;
+    width: 75%;
+    padding: 10px;
+}
+.sideScroller{
+    width: 25%;
+    padding: 10px;
+}
+.stepContent{
+    margin: 10px 0px;
+    height: fit-content;
+    min-height: 300px;
+}
+.sideStep{
+    margin: 10px 0px;
+    height: fit-content;
+}

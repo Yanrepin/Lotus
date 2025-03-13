@@ -3496,6 +3496,23 @@
       "top_spacing": "Spaziatura superiore della sezione",
       "bottom_spacing": "Spaziatura inferiore della sezione"
     },
+    "steps": {
+      "heading": "Intestazione",
+      "description": "Descrizione",
+      "text_alignment": "Allineamento del testo",
+      "step": {
+        "title": "Titolo del passaggio",
+        "description": "Descrizione del passaggio",
+        "image": "Immagine",
+        "step_image_ratio": "Proporzioni dell'immagine",
+        "content_title": "Titolo del contenuto",
+        "content_description": "Descrizione del contenuto",
+        "show_button": "Mostra pulsante",
+        "button_label": "Etichetta del pulsante",
+        "button_link": "Link del pulsante"
+      }
+    },
+
 
 
   }

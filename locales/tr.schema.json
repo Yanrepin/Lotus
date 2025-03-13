@@ -3496,6 +3496,23 @@
       "top_spacing": "Bölüm Üst Boşluğu",
       "bottom_spacing": "Bölüm Alt Boşluğu"
     },
+    "steps": {
+      "heading": "Başlık",
+      "description": "Açıklama",
+      "text_alignment": "Metin hizalaması",
+      "step": {
+        "title": "Adım başlığı",
+        "description": "Adım açıklaması",
+        "image": "Resim",
+        "step_image_ratio": "Resim oranı",
+        "content_title": "İçerik başlığı",
+        "content_description": "İçerik açıklaması",
+        "show_button": "Butonu göster",
+        "button_label": "Buton etiketi",
+        "button_link": "Buton bağlantısı"
+      }
+    },
+
 
 
   }

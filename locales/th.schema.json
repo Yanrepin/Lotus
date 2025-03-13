@@ -3496,6 +3496,23 @@
       "top_spacing": "ระยะห่างด้านบนของส่วน",
       "bottom_spacing": "ระยะห่างด้านล่างของส่วน"
     },
+    "steps": {
+      "heading": "หัวข้อ",
+      "description": "คำอธิบาย",
+      "text_alignment": "การจัดตำแหน่งข้อความ",
+      "step": {
+        "title": "หัวข้อขั้นตอน",
+        "description": "คำอธิบายขั้นตอน",
+        "image": "รูปภาพ",
+        "step_image_ratio": "อัตราส่วนของรูปภาพ",
+        "content_title": "หัวข้อเนื้อหา",
+        "content_description": "คำอธิบายเนื้อหา",
+        "show_button": "แสดงปุ่ม",
+        "button_label": "ป้ายปุ่ม",
+        "button_link": "ลิงก์ปุ่ม"
+      }
+    }
+
 
 
   }

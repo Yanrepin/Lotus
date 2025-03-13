@@ -3496,6 +3496,22 @@
       "top_spacing": "區塊上方間距",
       "bottom_spacing": "區塊下方間距"
     },
+    "steps": {
+      "heading": "標題",
+      "description": "描述",
+      "text_alignment": "文字對齊",
+      "step": {
+        "title": "步驟標題",
+        "description": "步驟描述",
+        "image": "圖片",
+        "step_image_ratio": "圖片比例",
+        "content_title": "內容標題",
+        "content_description": "內容描述",
+        "show_button": "顯示按鈕",
+        "button_label": "按鈕標籤",
+        "button_link": "按鈕連結"
+      }
+    },
 
 
 

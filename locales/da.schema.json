@@ -3496,6 +3496,23 @@
       "top_spacing": "Sektionens øverste afstand",
       "bottom_spacing": "Sektionens nederste afstand"
     },
+    "steps": {
+      "heading": "Overskrift",
+      "description": "Beskrivelse",
+      "text_alignment": "Tekstjustering",
+      "step": {
+        "title": "Trinoverskrift",
+        "description": "Trinbeskrivelse",
+        "image": "Billede",
+        "step_image_ratio": "Billedformat",
+        "content_title": "Indholdets overskrift",
+        "content_description": "Indholdsbeskrivelse",
+        "show_button": "Vis knap",
+        "button_label": "Knaptekst",
+        "button_link": "Knaplink"
+      }
+    }
+
 
   }
 }

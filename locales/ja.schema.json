@@ -3495,7 +3495,24 @@
       "background_image": "背景画像",
       "top_spacing": "セクションの上部余白",
       "bottom_spacing": "セクションの下部余白"
-    }
+    },
+    "steps": {
+      "heading": "見出し",
+      "description": "説明",
+      "text_alignment": "テキストの配置",
+      "step": {
+        "title": "ステップの見出し",
+        "description": "ステップの説明",
+        "image": "画像",
+        "step_image_ratio": "画像の縦横比",
+        "content_title": "コンテンツの見出し",
+        "content_description": "コンテンツの説明",
+        "show_button": "ボタンを表示",
+        "button_label": "ボタンラベル",
+        "button_link": "ボタンリンク"
+      }
+    },
+
 
 
   }

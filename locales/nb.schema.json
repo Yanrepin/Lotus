@@ -3495,7 +3495,24 @@
       "background_image": "Bakgrunnsbilde",
       "top_spacing": "Øvre avstand for seksjon",
       "bottom_spacing": "Nedre avstand for seksjon"
-    }
+    },
+    "steps": {
+      "heading": "Overskrift",
+      "description": "Beskrivelse",
+      "text_alignment": "Tekstjustering",
+      "step": {
+        "title": "Trinnoverskrift",
+        "description": "Trinnbeskrivelse",
+        "image": "Bilde",
+        "step_image_ratio": "Bildeforhold",
+        "content_title": "Innholdstittel",
+        "content_description": "Innholdsbeskrivelse",
+        "show_button": "Vis knapp",
+        "button_label": "Knappetekst",
+        "button_link": "Knappelenke"
+      }
+    },
+
 
 
   }

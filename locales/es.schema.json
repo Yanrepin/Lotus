@@ -3495,7 +3495,24 @@
       "background_image": "Imagen de fondo",
       "top_spacing": "Espaciado superior de la sección",
       "bottom_spacing": "Espaciado inferior de la sección"
-    }
+    },
+    "steps": {
+      "heading": "Encabezado",
+      "description": "Descripción",
+      "text_alignment": "Alineación del texto",
+      "step": {
+        "title": "Encabezado del paso",
+        "description": "Descripción del paso",
+        "image": "Imagen",
+        "step_image_ratio": "Relación de aspecto de la imagen",
+        "content_title": "Encabezado del contenido",
+        "content_description": "Descripción del contenido",
+        "show_button": "Mostrar botón",
+        "button_label": "Etiqueta del botón",
+        "button_link": "Enlace del botón"
+      }
+    },
+
 
 
   }

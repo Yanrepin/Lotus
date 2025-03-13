@@ -3496,5 +3496,22 @@
       "top_spacing": "Horní odsazení sekce",
       "bottom_spacing": "Spodní odsazení sekce"
     },
+    "steps": {
+      "heading": "Nadpis",
+      "description": "Popis",
+      "text_alignment": "Zarovnání textu",
+      "step": {
+        "title": "Nadpis kroku",
+        "description": "Popis kroku",
+        "image": "Obrázek",
+        "step_image_ratio": "Poměr stran obrázku",
+        "content_title": "Nadpis obsahu",
+        "content_description": "Popis obsahu",
+        "show_button": "Zobrazit tlačítko",
+        "button_label": "Popisek tlačítka",
+        "button_link": "Odkaz na tlačítko"
+      }
+    },
+
   }
 }

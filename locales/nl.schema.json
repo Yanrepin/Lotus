@@ -3495,7 +3495,24 @@
       "background_image": "Achtergrondafbeelding",
       "top_spacing": "Bovenste marge van sectie",
       "bottom_spacing": "Onderste marge van sectie"
-    }
+    },
+    "steps": {
+      "heading": "Kop",
+      "description": "Beschrijving",
+      "text_alignment": "Tekstuitlijning",
+      "step": {
+        "title": "Stapkop",
+        "description": "Stapbeschrijving",
+        "image": "Afbeelding",
+        "step_image_ratio": "Afbeeldingsverhouding",
+        "content_title": "Inhoudskop",
+        "content_description": "Inhoudsbeschrijving",
+        "show_button": "Toon knop",
+        "button_label": "Knoplabel",
+        "button_link": "Knoplink"
+      }
+    },
+
 
 
   }

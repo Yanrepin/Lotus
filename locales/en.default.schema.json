@@ -3495,6 +3495,22 @@
       "background_image":"Background Image",
       "top_spacing":"Section Top Spacing",
       "bottom_spacing":"Section Bottom Spacing"
+    },
+    "steps":{
+      "heading":"Heading",
+      "description":"Description",
+      "text_alignment":"Text alignment",
+      "step":{
+        "title":"Step heading",
+        "description":"Step description",
+        "image":"Image",
+        "step_image_ratio":"Image ratio",
+        "content_title":"Content heading",
+        "content_description":"Content description",
+        "show_button":"Show button",
+        "button_label":"Button label",
+        "button_link":"Button link"
+      }
     }
   }
 }
