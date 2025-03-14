@@ -1,8 +1,10 @@
 .steps{
     width: 100%;
-    max-height:1200px;
+
     max-width:var(--page-width);
     justify-self: center;
+    color: var(--steps_text_color);
+    background-color: var(--steps_background_color);
 }
 .stepsHeader{
     text-align: var(--steps_text_alignment);
@@ -11,22 +13,48 @@
 .stepsBody{
     display: flex;
     gap: 50px;
+    position: relative; 
 }
 .stepsContent{
-    border-left: 1px solid black;
+
     width: 75%;
     padding: 10px;
 }
 .sideScroller{
     width: 25%;
     padding: 10px;
+    position: sticky;
+    top: 85px; /* Adjust if you have a fixed header */
+    align-self: flex-start;
 }
 .stepContent{
     margin: 10px 0px;
     height: fit-content;
-    min-height: 300px;
+    min-height: 350px;
 }
 .sideStep{
     margin: 10px 0px;
     height: fit-content;
+}
+.stepInnerWrapper{
+    display: flex;
+}
+.stepInner{
+    width: 50%;
+}
+.stepImage img{
+    border-radius:8px;
+}
+.sideStep.active {
+    font-weight: bold;
+    border-left: 3px solid #000;
+    padding-left: 7px;
+    background-color: #f3f3f3;
+}
+.sideStep:not(.active) {
+    opacity: 0.7;
+}
+.stepContent a{
+    text-decoration: none;
+    color: var(--steps_button_color);
 }

@@ -2,21 +2,61 @@
 <style>
   :root {
     --steps_text_alignment: {{ section.settings.steps_text_alignment }};
+    --steps_text_color: {{ section.settings.color_scheme.settings.text }};
+    --steps_background_color: {{ section.settings.color_scheme.settings.background }};
+    --steps_background_gradient_color: {{ section.settings.color_scheme.settings.background_gradient }};
+    --steps_button_color: {{ section.settings.color_scheme.settings.button }};
+    --steps_button_label_color: {{ section.settings.color_scheme.settings.button_label }};
+    --steps_shadow_color: {{ section.settings.color_scheme.settings.shadow }};
+
   }
 </style>
 {{ 'steps.css' | asset_url | stylesheet_tag }}
 
+{% comment %} JS {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const stepContents = document.querySelectorAll('.stepContent');
+    const sideSteps = document.querySelectorAll('.sideStep');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Sort by vertical position so we always get the one closest to top
+        const visibleSteps = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        if (visibleSteps.length > 0) {
+          const currentStepId = visibleSteps[0].target.dataset.stepId;
+
+          sideSteps.forEach((step) => {
+            step.classList.toggle('active', step.dataset.stepId === currentStepId);
+          });
+        }
+      },
+      {
+        root: null,
+        threshold: 0.7,
+      }
+    );
+
+    stepContents.forEach((content) => {
+      observer.observe(content);
+    });
+  });
+</script>
+
 {% comment %} section content {% endcomment %}
 <div class="steps">
   <div class="stepsHeader">
-    {{ section.settings.steps_heading }}
-    {{ section.settings.steps_description }}
+    <h2>{{ section.settings.steps_heading }}</h2>
+    <h3>{{ section.settings.steps_description }}</h3>
   </div>
 
   <div class="stepsBody">
     <div class="sideScroller">
       {% for step in section.blocks %}
-        <div class="sideStep">
+        <div class="sideStep" data-step-id="step-{{ forloop.index0 }}">
           <div>
             {{ step.settings.step_title }}
           </div>
@@ -28,12 +68,20 @@
     </div>
     <div class="stepsContent">
       {% for step in section.blocks %}
-        <div class="stepContent">
-          <div>
-            {{ step.settings.step_content_title }}
-          </div>
-          <div>
-            {{ step.settings.step_content_description }}
+        <div class="stepContent" data-step-id="step-{{ forloop.index0 }}">
+          {% if step.settings.step_image %}
+            <div class="stepImage">
+              <img
+                src="{{ step.settings.step_image | image_url: width: 800 }}"
+                loading="lazy"
+                alt="{{ step.settings.step_image.alt | escape }}"
+                style="aspect-ratio:{% if step.settings.step_image_ratio!="adapt" %}{{ step.settings.step_image_ratio }}{% endif %}"
+              >
+            </div>
+          {% endif %}
+          <div class="stepInnerWrapper">
+            <div class="stepInner">{{ step.settings.step_content_title }}</div>
+            <div class="stepInner">{{ step.settings.step_content_description }}</div>
           </div>
           {% if step.settings.step_show_button %}
             <a href="{{ step.settings.step_button_link }}">
@@ -63,12 +111,14 @@
     {
       "type": "richtext",
       "id": "steps_heading",
-      "label": "t:sections.steps.heading"
+      "label": "t:sections.steps.heading",
+      "default": "t:sections.steps.heading"
     },
     {
       "type": "textarea",
       "id": "steps_description",
-      "label": "t:sections.steps.description"
+      "label": "t:sections.steps.description",
+      "default": "t:sections.steps.description"
     },
     {
       "type": "text_alignment",
