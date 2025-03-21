@@ -421,6 +421,10 @@
       "colorConfig":"Color Configuration",
       "colorConfigInfo":"Relevanr for color type, Enter a configuration from color name to HAX color code in a format of {color_name}:{HAX_code} and seperated with comma .\n For Example: black:#fff , white:#000",
       "maxSwatches":"Maximun Swatches to present",
+      "swatchesShapeLabel":"Swatches Shape",
+      "shape1":"Circle",
+      "shape2":"Square",
+      "swatchesSize":"Swatches Size"
     }
   },
   "sections": {

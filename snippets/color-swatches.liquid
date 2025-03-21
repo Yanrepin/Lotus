@@ -21,7 +21,8 @@
 {% comment %} CSS files {% endcomment %}
 <style>
   :root {
-    {% comment %} --steps_text_alignment: {{ section.settings.steps_text_alignment }};
+    --swatches_size: {{ settings.swatchesSize }}px;
+     {% comment %}
     --steps_text_color: {{ section.settings.color_scheme.settings.text }};
     --steps_background_color: {{ section.settings.color_scheme.settings.background }};
     --steps_background_gradient_color: {{ section.settings.color_scheme.settings.background_gradient }};
@@ -119,7 +120,7 @@
         <div
           class="
             colorSwatch
-            {% if settings.swatchesOptions == 'color' %}circle{% endif %}
+            {% if settings.swatchesShape == 'circle' %}circle{% else %}square{% endif %}
             {% if index > max_index %}overMaxSwatchHidden{% endif %}
           "
           data-color="{{ color_option | escape }}"

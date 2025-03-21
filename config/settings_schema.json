@@ -435,16 +435,38 @@
         "label": "t:settings_schema.swatches.typeLabel"
       },
       {
-        "type": "textarea",
-        "id": "colorConfig",
-        "label": "t:settings_schema.swatches.colorConfig",
-        "info": "t:settings_schema.swatches.colorConfigInfo"
+        "type": "select",
+        "id": "swatchesShape",
+        "options": [
+          {
+            "value": "circle",
+            "label": "t:settings_schema.swatches.shape1"
+          },
+          {
+            "value": "square",
+            "label": "t:settings_schema.swatches.shape2"
+          }
+        ],
+        "default": "circle",
+        "label": "t:settings_schema.swatches.swatchesShapeLabel"
+      },
+      {
+        "type": "number",
+        "id": "swatchesSize",
+        "label": "t:settings_schema.swatches.swatchesSize",
+        "default":15
       },
       {
         "type": "number",
         "id": "maxSwatches",
         "label": "t:settings_schema.swatches.maxSwatches",
         "default":3
+      },
+      {
+        "type": "textarea",
+        "id": "colorConfig",
+        "label": "t:settings_schema.swatches.colorConfig",
+        "info": "t:settings_schema.swatches.colorConfigInfo"
       }
       
     ]

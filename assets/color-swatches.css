@@ -4,8 +4,8 @@
     gap:5px;
 }
 .colorsWrapper .colorSwatch{
-    height: 15px;
-    width: 15px;
+    height: var(--swatches_size);
+    width: var(--swatches_size);
     display: flex;
     cursor: pointer;
 }
