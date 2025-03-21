@@ -1,0 +1,33 @@
+.colorsWrapper{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+.colorsWrapper .colorSwatch{
+    height: 15px;
+    width: 15px;
+    display: flex;
+    cursor: pointer;
+}
+.colorSwatch.selected{
+    border:1px solid black;
+    padding:1px;
+    box-shadow: 0px 5px 10px #0000009e;
+    
+}
+.colorsWrapper .overMaxSwatchHidden{
+    display: none;
+}
+.colorsWrapper .overMaxSwatchVisible{
+    display: flex;
+}
+.plusSwatches{
+    cursor: pointer;
+    font-size: 12px;
+}
+.circle{
+    border-radius: 50%;
+}
+.full-unstyled-link::after{
+    display: none;
+}

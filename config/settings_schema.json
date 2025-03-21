@@ -410,6 +410,46 @@
     ]
   },
   {
+    "name": "t:settings_schema.swatches.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "label": "t:settings_schema.swatches.checkbox",
+        "id": "swatchesSwitch",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "swatchesOptions",
+        "options": [
+          {
+            "value": "color",
+            "label": "t:settings_schema.swatches.type1"
+          },
+          {
+            "value": "variantFirstImage",
+            "label": "t:settings_schema.swatches.type2"
+          }
+        ],
+        "default": "color",
+        "label": "t:settings_schema.swatches.typeLabel"
+      },
+      {
+        "type": "textarea",
+        "id": "colorConfig",
+        "label": "t:settings_schema.swatches.colorConfig",
+        "info": "t:settings_schema.swatches.colorConfigInfo"
+      },
+      {
+        "type": "number",
+        "id": "maxSwatches",
+        "label": "t:settings_schema.swatches.maxSwatches",
+        "default":3
+      }
+      
+    ]
+  },
+  {
     "name": "t:settings_schema.inputs.name",
     "settings": [
       {
