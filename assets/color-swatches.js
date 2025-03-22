@@ -21,9 +21,6 @@ function handleSwatchClick(event) {
     selected.classList.remove('selected');
   });
   swatch.classList.add('selected');
-
-  console.log('Product:', product);
-  console.log('relatedVariations:', relatedVariations);
 }
 
 // event for + sign to open or close the overflow swatches
