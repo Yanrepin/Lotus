@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Värinäytteet",
+      "checkbox": "Ota värinäytteet käyttöön",
+      "typeLabel": "Värinäytteen näyttötyyppi",
+      "type1": "Väri",
+      "type2": "Variantin kuva",
+      "colorConfig": "Mukautettu värikartoitus",
+      "colorConfigInfo": "Vain 'Väri'-tyypille. Anna mukautetut värit ja HEX-koodit muodossa: {värin_nimi}:{hex_koodi}, eroteltuna pilkuilla.\nEsimerkki: musta:#000000, valkoinen:#FFFFFF",
+      "maxSwatches": "Näytettävien värinäytteiden enimmäismäärä",
+      "swatchesShapeLabel": "Värinäytteen muoto",
+      "shape1": "Ympyrä",
+      "shape2": "Neliö",
+      "swatchesSize": "Värinäytteen koko (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

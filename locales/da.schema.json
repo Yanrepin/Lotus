@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Prøver",
+      "checkbox": "Aktivér prøver",
+      "typeLabel": "Visningstype for prøve",
+      "type1": "Farve",
+      "type2": "Variantbillede",
+      "colorConfig": "Brugerdefineret farvetilknytning",
+      "colorConfigInfo": "Kun til typen 'Farve'. Angiv brugerdefinerede tilknytninger fra farvenavne til HEX-koder i formatet: {farvenavn}:{hex_kode}, adskilt med kommaer.\nEksempel: sort:#000000, hvid:#FFFFFF",
+      "maxSwatches": "Maksimalt antal prøver der vises",
+      "swatchesShapeLabel": "Form på prøve",
+      "shape1": "Cirkel",
+      "shape2": "Firkant",
+      "swatchesSize": "Størrelse på prøve (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

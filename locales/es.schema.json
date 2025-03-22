@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Muestras",
+      "checkbox": "Activar muestras",
+      "typeLabel": "Tipo de visualización de muestra",
+      "type1": "Color",
+      "type2": "Imagen de variante",
+      "colorConfig": "Asignación de colores personalizada",
+      "colorConfigInfo": "Solo se usa para el tipo 'Color'. Proporciona asignaciones personalizadas de nombres de color a códigos HEX en el formato: {nombre_color}:{código_hex}, separados por comas.\nEjemplo: negro:#000000, blanco:#FFFFFF",
+      "maxSwatches": "Número máximo de muestras a mostrar",
+      "swatchesShapeLabel": "Forma de la muestra",
+      "shape1": "Círculo",
+      "shape2": "Cuadrado",
+      "swatchesSize": "Tamaño de la muestra (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Fargeprøver",
+      "checkbox": "Aktiver fargeprøver",
+      "typeLabel": "Visningstype for fargeprøver",
+      "type1": "Farge",
+      "type2": "Variantbilde",
+      "colorConfig": "Egendefinert fargemapping",
+      "colorConfigInfo": "Brukes kun for 'Farge' type. Oppgi egendefinerte koblinger fra fargenavn til HEX-koder i formatet: {fargenavn}:{hex_kode}, separert med komma.\nEksempel: svart:#000000, hvit:#FFFFFF",
+      "maxSwatches": "Maksimalt antall prøver som skal vises",
+      "swatchesShapeLabel": "Form på fargeprøve",
+      "shape1": "Sirkel",
+      "shape2": "Firkant",
+      "swatchesSize": "Størrelse på fargeprøve (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

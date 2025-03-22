@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Färgmönster",
+      "checkbox": "Aktivera färgmönster",
+      "typeLabel": "Visningstyp för färgmönster",
+      "type1": "Färg",
+      "type2": "Variantbild",
+      "colorConfig": "Anpassad färgkartläggning",
+      "colorConfigInfo": "Används endast för typen 'Färg'. Ange anpassade kopplingar från färgnamn till HEX-koder i formatet: {färgnamn}:{hex_kod}, separerade med kommatecken.\nExempel: svart:#000000, vit:#FFFFFF",
+      "maxSwatches": "Maximalt antal färgmönster som ska visas",
+      "swatchesShapeLabel": "Form på färgmönster",
+      "shape1": "Cirkel",
+      "shape2": "Kvadrat",
+      "swatchesSize": "Storlek på färgmönster (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

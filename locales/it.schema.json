@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Campioni",
+      "checkbox": "Abilita campioni",
+      "typeLabel": "Tipo di visualizzazione campione",
+      "type1": "Colore",
+      "type2": "Immagine della variante",
+      "colorConfig": "Mappatura colore personalizzata",
+      "colorConfigInfo": "Usato solo per il tipo 'Colore'. Fornisci mappature personalizzate tra nomi dei colori e codici HEX nel formato: {nome_colore}:{codice_hex}, separati da virgole.\nEsempio: nero:#000000, bianco:#FFFFFF",
+      "maxSwatches": "Numero massimo di campioni da mostrare",
+      "swatchesShapeLabel": "Forma del campione",
+      "shape1": "Cerchio",
+      "shape2": "Quadrato",
+      "swatchesSize": "Dimensione del campione (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

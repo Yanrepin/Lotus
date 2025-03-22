@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "カラースウォッチ",
+      "checkbox": "カラースウォッチを有効にする",
+      "typeLabel": "スウォッチ表示タイプ",
+      "type1": "色",
+      "type2": "バリアント画像",
+      "colorConfig": "カスタムカラーマッピング",
+      "colorConfigInfo": "'色'タイプのみ使用されます。色名とHEXコードをカンマで区切って指定します。\n例: 黒:#000000, 白:#FFFFFF",
+      "maxSwatches": "表示する最大スウォッチ数",
+      "swatchesShapeLabel": "スウォッチの形状",
+      "shape1": "円形",
+      "shape2": "四角形",
+      "swatchesSize": "スウォッチサイズ（px）"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

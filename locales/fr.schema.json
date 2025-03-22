@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Échantillons",
+      "checkbox": "Activer les échantillons",
+      "typeLabel": "Type d’affichage des échantillons",
+      "type1": "Couleur",
+      "type2": "Image de la variante",
+      "colorConfig": "Correspondance de couleurs personnalisée",
+      "colorConfigInfo": "Utilisé uniquement pour le type 'Couleur'. Fournissez des correspondances personnalisées entre les noms de couleur et les codes HEX au format : {nom_couleur}:{code_hex}, séparés par des virgules.\nExemple : noir:#000000, blanc:#FFFFFF",
+      "maxSwatches": "Nombre maximal d’échantillons à afficher",
+      "swatchesShapeLabel": "Forme de l’échantillon",
+      "shape1": "Cercle",
+      "shape2": "Carré",
+      "swatchesSize": "Taille de l’échantillon (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

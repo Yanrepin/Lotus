@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Amostras de Cores",
+      "checkbox": "Ativar Amostras de Cores",
+      "typeLabel": "Tipo de Exibição da Amostra",
+      "type1": "Cor",
+      "type2": "Imagem da Variante",
+      "colorConfig": "Mapeamento de Cores Personalizado",
+      "colorConfigInfo": "Usado apenas para o tipo 'Cor'. Forneça mapeamentos personalizados de nomes de cores para códigos HEX no formato: {nome_da_cor}:{codigo_hex}, separados por vírgulas.\nExemplo: preto:#000000, branco:#FFFFFF",
+      "maxSwatches": "Número máximo de amostras a exibir",
+      "swatchesShapeLabel": "Forma da Amostra",
+      "shape1": "Círculo",
+      "shape2": "Quadrado",
+      "swatchesSize": "Tamanho da Amostra (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

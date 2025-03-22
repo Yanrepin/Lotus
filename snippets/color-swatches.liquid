@@ -1,11 +1,13 @@
 {% comment %}
-  Renders a list of product's price (regular, sale)
+  Renders swatches,
+  JS rendered at theme.liquid file only at case the switch is on,
+  rendering it there is in order to render the script only once and to work also for widgets
 
   Accepts:
   - product: {Object} Product Liquid object (optional)
 
   Usage:
-  {% render 'price', product: product %}
+  {% render 'color-swatches', product: product %}
 {% endcomment %}
 
 {%- liquid
@@ -34,89 +36,58 @@
 </style>
 {{ 'color-swatches.css' | asset_url | stylesheet_tag }}
 
-{% comment %} JS {% endcomment %}
-<script>
-  function handleSwatchClick(event) {
-    const swatch = event.currentTarget;
-    const swatchWrapper = swatch.closest('.colorsWrapper');
-
-    //handling data
-    const color = swatch.dataset.color;
-    const product = JSON.parse(swatch.dataset.product);
-    const option = swatch.dataset.option;
-    const relatedVariations = product?.variants.filter((variation) => {
-      if (variation.option1 == color || variation.option2 == color || variation.option3 == color) return true;
-      return false;
-    });
-
-    //find variant image if exists
-    var image = '';
-    if (relatedVariations) {
-      const variationWithImage = relatedVariations.find(
-        (variation) => variation.featured_image && variation.featured_image.src
-      );
-      if (variationWithImage) {
-        image = variationWithImage.featured_image.src;
-      }
-    }
-
-    //handle selected calss
-    swatchWrapper.querySelectorAll('.selected').forEach((selected) => {
-      selected.classList.remove('selected');
-    });
-    swatch.classList.add('selected');
-
-    console.log('Product:', product);
-    console.log('relatedVariations:', relatedVariations);
-    console.log('image:', image);
-  }
-
-  function handleMoreSwatchesClick(event) {
-    // event for + sign to open or close the overflow swatches
-    const plusOrMinus = event.target;
-    const swatchesWrapperElement = plusOrMinus.closest('.colorsWrapper');
-    if (swatchesWrapperElement) {
-      if (plusOrMinus.innerHTML.indexOf('+') > -1) {
-        plusOrMinus.innerHTML = plusOrMinus.innerHTML.replace('+', '-');
-        swatchesWrapperElement.querySelectorAll('.overMaxSwatchHidden').forEach((overflowSwatch) => {
-          overflowSwatch.classList.add('overMaxSwatchVisible');
-          overflowSwatch.classList.remove('overMaxSwatchHidden');
-        });
-      } else {
-        plusOrMinus.innerHTML = plusOrMinus.innerHTML.replace('-', '+');
-        swatchesWrapperElement.querySelectorAll('.overMaxSwatchVisible').forEach((overflowSwatch) => {
-          overflowSwatch.classList.add('overMaxSwatchHidden');
-          overflowSwatch.classList.remove('overMaxSwatchVisible');
-        });
-      }
-    }
-  }
-</script>
-
 {% comment %} section content {% endcomment %}
 {% assign color_config = settings.colorConfig | downcase | split: ',' %}
 {% assign max_swatches = settings.maxSwatches | default: 5 %}
+{% assign swatch_size = settings.swatchesSize | times: 2 %}
+{% assign swatch_size_string = swatch_size | append: 'x' %}
 
 {%- for option in product.options_with_values -%}
   {% assign option_name = option.name | downcase %}
 
   {% if color_names contains option_name %}
-    <div class="colorsWrapper">
+    <div class="colorsWrapper" data-product="{{ product | json | escape }}">
       {% assign overflow_count = option.values.size | minus: max_swatches %}
 
       {%- for color_option in option.values -%}
         {% assign index = forloop.index0 %}
         {% assign max_index = max_swatches | minus: 1 %}
 
+        {% comment %} searching in the custom config {% endcomment %}
         {%- assign bg_color = color_option | downcase -%}
         {%- assign hex_code = '' -%}
-        {%- for pair in color_config -%}
-          {%- assign parts = pair | split: ':' -%}
-          {%- if parts[0] == bg_color -%}
-            {%- assign hex_code = parts[1] -%}
-          {%- endif -%}
-        {%- endfor -%}
+        {% if settings.swatchesOptions == 'color' %}
+          {%- for pair in color_config -%}
+            {%- assign parts = pair | split: ':' -%}
+            {%- if parts[0] == bg_color -%}
+              {%- assign hex_code = parts[1] -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
 
+        {% comment %} exicuted first variant image {% endcomment %}
+        {% assign related_variations = '' %}
+        {% assign image = '' %}
+        {% assign second_image = '' %}
+        {% if settings.swatchesOptions == 'variantFirstImage' %}
+          {% assign related_variations = product.variants | where: 'option1', bg_color %}
+          {% assign more_variants = product.variants | where: 'option2', bg_color %}
+          {% assign related_variations = related_variations | concat: more_variants %}
+          {% assign more_variants = product.variants | where: 'option3', bg_color %}
+          {% assign related_variations = related_variations | concat: more_variants %}
+          {% for variant in related_variations %}
+            {% if variant.featured_image and variant.featured_image.src %}
+              {% if image == '' %}
+                {% assign image = variant.featured_image.src %}
+              {% else %}
+                {% assign second_image = variant.featured_image.src %}
+                {% break %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {% comment %} swatch HTML element {% endcomment %}
         <div
           class="
             colorSwatch
@@ -124,10 +95,16 @@
             {% if index > max_index %}overMaxSwatchHidden{% endif %}
           "
           data-color="{{ color_option | escape }}"
-          data-product="{{ product | json | escape }}"
           data-option="{{ option | escape }}"
+          {% if settings.swatchesOptions == 'variantFirstImage' %}
+            data-variantFirstImage="{{ image | escape  }}"
+            data-variantSecondImage="{{ second_image | escape  }}"
+          {% endif %}
           aria-label="{{ color_option }}"
-          style="{% if settings.swatchesOptions == 'color' %}background-color:{{ hex_code | default: bg_color }};{% endif %}"
+          style="
+            {% if settings.swatchesOptions == 'color' %}background-color:{{ hex_code | default: bg_color }};{% endif %}
+            {% if settings.swatchesOptions == 'variantFirstImage' %}background-image: url('{{ image | img_url: swatch_size_string }}'); background-size: cover; background-position: center;{% endif %}
+          "
           onclick="handleSwatchClick(event)"
         ></div>
       {%- endfor -%}

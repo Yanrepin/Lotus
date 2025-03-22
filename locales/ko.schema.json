@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "색상 샘플",
+      "checkbox": "색상 샘플 활성화",
+      "typeLabel": "색상 샘플 표시 유형",
+      "type1": "색상",
+      "type2": "변형 이미지",
+      "colorConfig": "사용자 정의 색상 매핑",
+      "colorConfigInfo": "'색상' 유형에만 사용됩니다. 색상 이름과 HEX 코드를 쉼표로 구분하여 입력하세요.\n예: 검정:#000000, 흰색:#FFFFFF",
+      "maxSwatches": "표시할 최대 샘플 수",
+      "swatchesShapeLabel": "샘플 모양",
+      "shape1": "원형",
+      "shape2": "사각형",
+      "swatchesSize": "샘플 크기 (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

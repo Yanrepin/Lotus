@@ -1,5 +1,19 @@
 {
   "settings_schema": {  
+    "swatches": {
+      "name": "Kleurstalen",
+      "checkbox": "Kleurstalen inschakelen",
+      "typeLabel": "Weergavetype voor kleurstalen",
+      "type1": "Kleur",
+      "type2": "Variantafbeelding",
+      "colorConfig": "Aangepaste kleurtoewijzing",
+      "colorConfigInfo": "Alleen gebruikt voor het type 'Kleur'. Geef aangepaste koppelingen van kleurnamen aan HEX-codes op in het formaat: {kleur_naam}:{hex_code}, gescheiden door komma's.\nVoorbeeld: zwart:#000000, wit:#FFFFFF",
+      "maxSwatches": "Maximum aantal weer te geven kleurstalen",
+      "swatchesShapeLabel": "Vorm van kleurstaal",
+      "shape1": "Cirkel",
+      "shape2": "Vierkant",
+      "swatchesSize": "Grootte van kleurstaal (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

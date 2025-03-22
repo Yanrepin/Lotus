@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "颜色样本",
+      "checkbox": "启用颜色样本",
+      "typeLabel": "样本显示类型",
+      "type1": "颜色",
+      "type2": "变体图片",
+      "colorConfig": "自定义颜色映射",
+      "colorConfigInfo": "仅用于'颜色'类型。提供自定义的颜色名称到HEX代码的映射，格式为：{颜色名称}:{HEX代码}，用逗号分隔。\n示例：黑色:#000000，白色:#FFFFFF",
+      "maxSwatches": "显示的最大样本数量",
+      "swatchesShapeLabel": "样本形状",
+      "shape1": "圆形",
+      "shape2": "方形",
+      "swatchesSize": "样本大小（px）"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

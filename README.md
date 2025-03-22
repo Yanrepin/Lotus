@@ -50,8 +50,10 @@ shopify theme publish
 - Shop The Look.
 - CountDown timer.
 - Steps
+
 ### Settings:
 - WhatsApp integration.
+- Swatches at product grid (PLP,SERP,Widget) , options for color\variant images
 - RTL support (toggle available in layout settings).
   - For specific elements, use:
   ```sh

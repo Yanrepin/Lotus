@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Farbmuster",
+      "checkbox": "Farbmuster aktivieren",
+      "typeLabel": "Anzeigetyp für Farbmuster",
+      "type1": "Farbe",
+      "type2": "Variantenbild",
+      "colorConfig": "Benutzerdefinierte Farbzuteilung",
+      "colorConfigInfo": "Nur für den Typ 'Farbe'. Gib benutzerdefinierte Zuordnungen von Farbnamen zu HEX-Codes im Format {farbname}:{hex_code} an, getrennt durch Kommas.\nBeispiel: schwarz:#000000, weiß:#FFFFFF",
+      "maxSwatches": "Maximale Anzahl anzuzeigender Farbmuster",
+      "swatchesShapeLabel": "Form des Farbmusters",
+      "shape1": "Kreis",
+      "shape2": "Quadrat",
+      "swatchesSize": "Größe des Farbmusters (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

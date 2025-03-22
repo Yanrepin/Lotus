@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Renk Örnekleri",
+      "checkbox": "Renk Örneklerini Etkinleştir",
+      "typeLabel": "Örnek Gösterim Türü",
+      "type1": "Renk",
+      "type2": "Varyant Görseli",
+      "colorConfig": "Özel Renk Eşlemesi",
+      "colorConfigInfo": "'Renk' türü için yalnızca kullanılır. Renk adları ile HEX kodları arasındaki özel eşlemeleri şu formatta sağlayın: {renk_adı}:{hex_kodu}, virgülle ayrılmış.\nÖrnek: siyah:#000000, beyaz:#FFFFFF",
+      "maxSwatches": "Gösterilecek Maksimum Örnek Sayısı",
+      "swatchesShapeLabel": "Örnek Şekli",
+      "shape1": "Daire",
+      "shape2": "Kare",
+      "swatchesSize": "Örnek Boyutu (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

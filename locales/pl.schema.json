@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Próbki kolorów",
+      "checkbox": "Włącz próbki kolorów",
+      "typeLabel": "Typ wyświetlania próbek",
+      "type1": "Kolor",
+      "type2": "Obraz wariantu",
+      "colorConfig": "Niestandardowe mapowanie kolorów",
+      "colorConfigInfo": "Używane tylko dla typu 'Kolor'. Podaj niestandardowe przypisania nazw kolorów do kodów HEX w formacie: {nazwa_koloru}:{kod_hex}, oddzielone przecinkami.\nPrzykład: czarny:#000000, biały:#FFFFFF",
+      "maxSwatches": "Maksymalna liczba wyświetlanych próbek",
+      "swatchesShapeLabel": "Kształt próbki",
+      "shape1": "Koło",
+      "shape2": "Kwadrat",
+      "swatchesSize": "Rozmiar próbki (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

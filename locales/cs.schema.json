@@ -1,5 +1,19 @@
 {
   "settings_schema": {
+    "swatches": {
+      "name": "Vzorníky",
+      "checkbox": "Povolit vzorníky",
+      "typeLabel": "Typ zobrazení vzorníku",
+      "type1": "Barva",
+      "type2": "Obrázek varianty",
+      "colorConfig": "Vlastní mapování barev",
+      "colorConfigInfo": "Pouze pro typ 'Barva'. Zadejte vlastní mapování názvů barev na HEX kódy ve formátu: {název_barvy}:{hex_kód}, oddělené čárkami.\nNapř.: černá:#000000, bílá:#FFFFFF",
+      "maxSwatches": "Maximální počet zobrazených vzorníků",
+      "swatchesShapeLabel": "Tvar vzorníku",
+      "shape1": "Kruh",
+      "shape2": "Čtverec",
+      "swatchesSize": "Velikost vzorníku (px)"
+    },
     "whatsapp": {
       "name": "WhatsApp",
       "settings": {

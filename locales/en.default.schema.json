@@ -414,17 +414,17 @@
     },
     "swatches":{
       "name":"Swatches",
-      "checkbox":"Active",
-      "typeLabel":"Swatches Type",
+      "checkbox":"Enable Swatches",
+      "typeLabel":"Swatch Display Type",
       "type1":"Color",
-      "type2":"First Variant Image",
-      "colorConfig":"Color Configuration",
-      "colorConfigInfo":"Relevanr for color type, Enter a configuration from color name to HAX color code in a format of {color_name}:{HAX_code} and seperated with comma .\n For Example: black:#fff , white:#000",
-      "maxSwatches":"Maximun Swatches to present",
+      "type2":"Variant Image",
+      "colorConfig":"Custom Color Mapping",
+      "colorConfigInfo":"Only used for 'Color' type. Provide custom mappings from color names to HEX codes. Use the format: {color_name}:{hex_code}, separated by commas.\nExample: black:#000000, white:#FFFFFF",
+      "maxSwatches": "Maximum Swatches to Show",
       "swatchesShapeLabel":"Swatches Shape",
       "shape1":"Circle",
       "shape2":"Square",
-      "swatchesSize":"Swatches Size"
+      "swatchesSize":"Swatch Size (px)"
     }
   },
   "sections": {
