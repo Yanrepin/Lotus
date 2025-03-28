@@ -93,13 +93,25 @@
               </div>
             {%- when 'product' -%}
               {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+
+              {% assign image_behavior = block.settings.image_behavior %}
+              {% assign show_secondary_image = false %}
+              {% assign image_carousal = false %}
+
+              {% if image_behavior == 'show secondary image' %}
+                {% assign show_secondary_image = true %}
+              {% elsif image_behavior == 'carousal' %}
+                {% assign image_carousal = true %}
+              {% endif %}
+
               {% render 'card-product',
                 card_product: block.settings.product,
                 media_aspect_ratio: 'adapt',
-                show_secondary_image: block.settings.second_image,
+                show_secondary_image: show_secondary_image,
                 extend_height: true,
                 placeholder_image: placeholder_image,
-                skip_styles: skip_card_product_styles
+                skip_styles: skip_card_product_styles,
+                image_carousal: image_carousal
               %}
               {% assign skip_card_product_styles = true %}
             {%- when 'collection' -%}
@@ -361,10 +373,24 @@
           "label": "t:sections.collage.blocks.product.settings.product.label"
         },
         {
-          "type": "checkbox",
-          "id": "second_image",
-          "default": false,
-          "label": "t:sections.collage.blocks.product.settings.second_image.label"
+          "type": "select",
+          "id": "image_behavior",
+          "default": "none",
+          "label": "t:sections.main-collection-product-grid.settings.image_behavior.label",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-collection-product-grid.settings.none.label"
+            },
+            {
+              "value": "show secondary image",
+              "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+            },
+            {
+              "value": "carousal",
+              "label": "t:sections.main-collection-product-grid.settings.carousal.label"
+            }
+          ]
         }
       ]
     },

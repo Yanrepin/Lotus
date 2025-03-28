@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "Afficher la deuxième image en survol"
         },
+        "none": {
+          "label": "Aucun"
+        },
+        "image_behavior": {
+          "label": "Comportement de l'image"
+        },
+        "carousal": {
+          "label": "Carrousel"
+        },
         "show_vendor": {
           "label": "Afficher le fournisseur"
         },
@@ -1572,6 +1581,15 @@
         "show_secondary_image": {
           "label": "Afficher la deuxième image en survol"
         },
+        "none": {
+          "label": "Aucun"
+        },
+        "image_behavior": {
+          "label": "Comportement de l'image"
+        },
+        "carousal": {
+          "label": "Carrousel"
+        },
         "show_vendor": {
           "label": "Afficher le fournisseur"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "Afficher la deuxième image en survol"
+        },
+        "none": {
+          "label": "Aucun"
+        },
+        "image_behavior": {
+          "label": "Comportement de l'image"
+        },
+        "carousal": {
+          "label": "Carrousel"
         },
         "show_vendor": {
           "label": "Afficher le fournisseur"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "Afficher la deuxième image en survol"
+        },
+        "none": {
+          "label": "Aucun"
+        },
+        "image_behavior": {
+          "label": "Comportement de l'image"
+        },
+        "carousal": {
+          "label": "Carrousel"
         },
         "show_vendor": {
           "label": "Afficher le fournisseur"

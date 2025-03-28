@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "マウスオーバー時に2番目の画像を表示する"
         },
+        "none": {
+          "label": "なし"
+        },
+        "image_behavior": {
+          "label": "画像の動作"
+        },
+        "carousal": {
+          "label": "カルーセル"
+        },
         "show_vendor": {
           "label": "販売元を表示する"
         },
@@ -1565,6 +1574,15 @@
         "show_secondary_image": {
           "label": "マウスオーバー時に2番目の画像を表示する"
         },
+        "none": {
+          "label": "なし"
+        },
+        "image_behavior": {
+          "label": "画像の動作"
+        },
+        "carousal": {
+          "label": "カルーセル"
+        },
         "show_vendor": {
           "label": "販売元を表示する"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "マウスオーバー時に2番目の画像を表示する"
+        },
+        "none": {
+          "label": "なし"
+        },
+        "image_behavior": {
+          "label": "画像の動作"
+        },
+        "carousal": {
+          "label": "カルーセル"
         },
         "show_vendor": {
           "label": "販売元を表示する"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "マウスオーバー時に2番目の画像を表示する"
+        },
+        "none": {
+          "label": "なし"
+        },
+        "image_behavior": {
+          "label": "画像の動作"
+        },
+        "carousal": {
+          "label": "カルーセル"
         },
         "show_vendor": {
           "label": "販売元を表示"

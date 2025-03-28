@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "游標暫留時顯示次要圖片"
         },
+        "none": {
+          "label": "無"
+        },
+        "image_behavior": {
+          "label": "圖片行為"
+        },
+        "carousal": {
+          "label": "旋轉木馬"
+        },
         "show_vendor": {
           "label": "顯示廠商"
         },
@@ -1565,6 +1574,15 @@
         "show_secondary_image": {
           "label": "游標暫留時顯示次要圖片"
         },
+        "none": {
+          "label": "無"
+        },
+        "image_behavior": {
+          "label": "圖片行為"
+        },
+        "carousal": {
+          "label": "旋轉木馬"
+        },
         "show_vendor": {
           "label": "顯示廠商"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "游標暫留時顯示次要圖片"
+        },
+        "none": {
+          "label": "無"
+        },
+        "image_behavior": {
+          "label": "圖片行為"
+        },
+        "carousal": {
+          "label": "旋轉木馬"
         },
         "show_vendor": {
           "label": "顯示廠商"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "游標暫留時顯示第二個圖片"
+        },
+        "none": {
+          "label": "無"
+        },
+        "image_behavior": {
+          "label": "圖片行為"
+        },
+        "carousal": {
+          "label": "旋轉木馬"
         },
         "show_vendor": {
           "label": "顯示廠商"

@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "Hover-Effekt mit zweitem Bild"
         },
+        "none": {
+          "label": "Keine"
+        },
+        "image_behavior": {
+          "label": "Bildverhalten"
+        },
+        "carousal": {
+          "label": "Karussell"
+        },
         "show_vendor": {
           "label": "Anbieter anzeigen"
         },
@@ -1572,6 +1581,15 @@
         "show_secondary_image": {
           "label": "Hover-Effekt mit zweitem Bild"
         },
+        "none": {
+          "label": "Keine"
+        },
+        "image_behavior": {
+          "label": "Bildverhalten"
+        },
+        "carousal": {
+          "label": "Karussell"
+        },
         "show_vendor": {
           "label": "Anbieter anzeigen"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "Hover-Effekt mit zweitem Bild"
+        },
+        "none": {
+          "label": "Keine"
+        },
+        "image_behavior": {
+          "label": "Bildverhalten"
+        },
+        "carousal": {
+          "label": "Karussell"
         },
         "show_vendor": {
           "label": "Anbieter anzeigen"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "Hover-Effekt mit zweitem Bild"
+        },
+        "none": {
+          "label": "Keine"
+        },
+        "image_behavior": {
+          "label": "Bildverhalten"
+        },
+        "carousal": {
+          "label": "Karussell"
         },
         "show_vendor": {
           "label": "Anbieter anzeigen"

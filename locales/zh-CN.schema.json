@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "在悬停时显示第二张图片"
         },
+        "none": {
+          "label": "无"
+        },
+        "image_behavior": {
+          "label": "图片行为"
+        },
+        "carousal": {
+          "label": "旋转木马"
+        },
         "show_vendor": {
           "label": "显示厂商"
         },
@@ -1565,6 +1574,15 @@
         "show_secondary_image": {
           "label": "在悬停时显示第二张图片"
         },
+        "none": {
+          "label": "无"
+        },
+        "image_behavior": {
+          "label": "图片行为"
+        },
+        "carousal": {
+          "label": "旋转木马"
+        },
         "show_vendor": {
           "label": "显示厂商"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "在悬停时显示第二张图片"
+        },
+        "none": {
+          "label": "无"
+        },
+        "image_behavior": {
+          "label": "图片行为"
+        },
+        "carousal": {
+          "label": "旋转木马"
         },
         "show_vendor": {
           "label": "显示厂商"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "在悬停时显示第二张图片"
+        },
+        "none": {
+          "label": "无"
+        },
+        "image_behavior": {
+          "label": "图片行为"
+        },
+        "carousal": {
+          "label": "旋转木马"
         },
         "show_vendor": {
           "label": "显示厂商"

@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "Üstüne gelindiğinde ikinci görseli göster"
         },
+        "none": {
+          "label": "Yok"
+        },
+        "image_behavior": {
+          "label": "Görüntü Davranışı"
+        },
+        "carousal": {
+          "label": "Dönme Dolabı"
+        },
         "show_vendor": {
           "label": "Satıcıyı göster"
         },
@@ -1572,6 +1581,15 @@
         "show_secondary_image": {
           "label": "Üstüne gelindiğinde ikinci görseli göster"
         },
+        "none": {
+          "label": "Yok"
+        },
+        "image_behavior": {
+          "label": "Görüntü Davranışı"
+        },
+        "carousal": {
+          "label": "Dönme Dolabı"
+        },
         "show_vendor": {
           "label": "Satıcıyı göster"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "Üstüne gelindiğinde ikinci görseli göster"
+        },
+        "none": {
+          "label": "Yok"
+        },
+        "image_behavior": {
+          "label": "Görüntü Davranışı"
+        },
+        "carousal": {
+          "label": "Dönme Dolabı"
         },
         "show_vendor": {
           "label": "Satıcıyı göster"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "Üstüne gelindiğinde ikinci görseli göster"
+        },
+        "none": {
+          "label": "Yok"
+        },
+        "image_behavior": {
+          "label": "Görüntü Davranışı"
+        },
+        "carousal": {
+          "label": "Dönme Dolabı"
         },
         "show_vendor": {
           "label": "Satıcıyı göster"

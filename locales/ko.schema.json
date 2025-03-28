@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "마우스를 올리면 보조 배경 표시"
         },
+        "none": {
+          "label": "없음"
+        },
+        "image_behavior": {
+          "label": "이미지 동작"
+        },
+        "carousal": {
+          "label": "회전목마"
+        },
         "show_vendor": {
           "label": "공급업체 표시"
         },
@@ -1565,6 +1574,15 @@
         "show_secondary_image": {
           "label": "마우스를 올리면 보조 배경 표시"
         },
+        "none": {
+          "label": "없음"
+        },
+        "image_behavior": {
+          "label": "이미지 동작"
+        },
+        "carousal": {
+          "label": "회전목마"
+        },
         "show_vendor": {
           "label": "공급업체 표시"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "마우스를 올리면 보조 배경 표시"
+        },
+        "none": {
+          "label": "없음"
+        },
+        "image_behavior": {
+          "label": "이미지 동작"
+        },
+        "carousal": {
+          "label": "회전목마"
         },
         "show_vendor": {
           "label": "공급업체 표시"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "마우스를 올리면 보조 이미지 표시"
+        },
+        "none": {
+          "label": "없음"
+        },
+        "image_behavior": {
+          "label": "이미지 동작"
+        },
+        "carousal": {
+          "label": "회전목마"
         },
         "show_vendor": {
           "label": "공급업체 표시"

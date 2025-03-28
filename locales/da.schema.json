@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "Vis sekundær baggrund, når der peges"
         },
+        "none": {
+          "label": "Ingen"
+        },
+        "image_behavior": {
+          "label": "Billedadfærd"
+        },
+        "carousal": {
+          "label": "Karrusel"
+        },
         "show_vendor": {
           "label": "Vis forhandler"
         },
@@ -1565,6 +1574,15 @@
         "show_secondary_image": {
           "label": "Vis sekundær baggrund, når der peges"
         },
+        "none": {
+          "label": "Ingen"
+        },
+        "image_behavior": {
+          "label": "Billedadfærd"
+        },
+        "carousal": {
+          "label": "Karrusel"
+        },
         "show_vendor": {
           "label": "Vis forhandler"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "Vis sekundær baggrund, når der peges"
+        },
+        "none": {
+          "label": "Ingen"
+        },
+        "image_behavior": {
+          "label": "Billedadfærd"
+        },
+        "carousal": {
+          "label": "Karrusel"
         },
         "show_vendor": {
           "label": "Vis forhandler"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "Vis sekundært billede, når der peges"
+        },
+        "none": {
+          "label": "Ingen"
+        },
+        "image_behavior": {
+          "label": "Billedadfærd"
+        },
+        "carousal": {
+          "label": "Karrusel"
         },
         "show_vendor": {
           "label": "Vis forhandler"

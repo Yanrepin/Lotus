@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "Zobrazit druhý obrázek po najetí myší/prstem"
         },
+        "none": {
+          "label": "Žádné"
+        },
+        "image_behavior": {
+          "label": "Chování obrázku"
+        },
+        "carousal": {
+          "label": "Karusel"
+        },
         "show_vendor": {
           "label": "Zobrazit dodavatele"
         },
@@ -1565,6 +1574,15 @@
         "show_secondary_image": {
           "label": "Zobrazit druhý obrázek po najetí myší/prstem"
         },
+        "none": {
+          "label": "Žádné"
+        },
+        "image_behavior": {
+          "label": "Chování obrázku"
+        },
+        "carousal": {
+          "label": "Karusel"
+        },
         "show_vendor": {
           "label": "Zobrazit dodavatele"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "Zobrazit druhý obrázek po najetí myší/prstem"
+        },
+        "none": {
+          "label": "Žádné"
+        },
+        "image_behavior": {
+          "label": "Chování obrázku"
+        },
+        "carousal": {
+          "label": "Karusel"
         },
         "show_vendor": {
           "label": "Zobrazit dodavatele"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "Zobrazit druhý obrázek po najetí myší/prstem"
+        },
+        "none": {
+          "label": "Žádné"
+        },
+        "image_behavior": {
+          "label": "Chování obrázku"
+        },
+        "carousal": {
+          "label": "Karusel"
         },
         "show_vendor": {
           "label": "Zobrazit dodavatele"

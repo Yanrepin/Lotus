@@ -806,6 +806,15 @@
         "show_secondary_image": {
           "label": "แสดงรูปภาพที่สองเมื่อนำเมาส์ไปวาง"
         },
+        "none": {
+          "label": "ไม่มี"
+        },
+        "image_behavior": {
+          "label": "พฤติกรรมของภาพ"
+        },
+        "carousal": {
+          "label": "สไลด์โชว์"
+        },
         "show_vendor": {
           "label": "แสดงเวนเดอร์"
         },
@@ -1565,6 +1574,15 @@
         "show_secondary_image": {
           "label": "แสดงรูปภาพที่สองเมื่อนำเมาส์ไปวาง"
         },
+        "none": {
+          "label": "ไม่มี"
+        },
+        "image_behavior": {
+          "label": "พฤติกรรมของภาพ"
+        },
+        "carousal": {
+          "label": "สไลด์โชว์"
+        },
         "show_vendor": {
           "label": "แสดงเวนเดอร์"
         },
@@ -2217,6 +2235,15 @@
         },
         "show_secondary_image": {
           "label": "แสดงรูปภาพที่สองเมื่อนำเมาส์ไปวาง"
+        },
+        "none": {
+          "label": "ไม่มี"
+        },
+        "image_behavior": {
+          "label": "พฤติกรรมของภาพ"
+        },
+        "carousal": {
+          "label": "สไลด์โชว์"
         },
         "show_vendor": {
           "label": "แสดงเวนเดอร์"
@@ -3296,6 +3323,15 @@
         },
         "show_secondary_image": {
           "label": "แสดงรูปภาพที่สองเมื่อนำเมาส์ไปวาง"
+        },
+        "none": {
+          "label": "ไม่มี"
+        },
+        "image_behavior": {
+          "label": "พฤติกรรมของภาพ"
+        },
+        "carousal": {
+          "label": "สไลด์โชว์"
         },
         "show_vendor": {
           "label": "แสดงเวนเดอร์"

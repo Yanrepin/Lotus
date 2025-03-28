@@ -856,6 +856,15 @@
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
+        "none": {
+          "label": "None"
+        },
+        "image_behavior": {
+          "label": "Image Behavior"
+        },
+        "carousal": {
+          "label": "Carousal"
+        },
         "show_vendor": {
           "label": "Show vendor"
         },
@@ -1898,6 +1907,15 @@
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
+        "none": {
+          "label": "None"
+        },
+        "image_behavior": {
+          "label": "Image Behavior"
+        },
+        "carousal": {
+          "label": "Carousal"
+        },
         "show_vendor": {
           "label": "Show vendor"
         },
@@ -2546,6 +2564,15 @@
         "show_secondary_image": {
           "label": "Show second image on hover"
         },
+        "none": {
+          "label": "None"
+        },
+        "image_behavior": {
+          "label": "Image Behavior"
+        },
+        "carousal": {
+          "label": "Carousal"
+        },
         "show_vendor": {
           "label": "Show vendor"
         },
@@ -2916,6 +2943,15 @@
         },
         "show_secondary_image": {
           "label": "Show second image on hover"
+        },
+        "none": {
+          "label": "None"
+        },
+        "image_behavior": {
+          "label": "Image Behavior"
+        },
+        "carousal": {
+          "label": "Carousal"
         },
         "show_vendor": {
           "label": "Show vendor"
