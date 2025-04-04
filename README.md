@@ -54,6 +54,7 @@ shopify theme publish
 ### Settings:
 - WhatsApp integration.
 - Swatches at product grid (PLP,SERP,Widget) , options for color\variant images
+- Sale badge with 3 options : sale label, differance in price, presentage off
 - RTL support (toggle available in layout settings).
   - For specific elements, use:
   ```sh
