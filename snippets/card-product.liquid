@@ -107,6 +107,10 @@
               {%- endif -%}
 
               {%- if card_product.media.size > 1 and image_carousal -%}
+                <div class="carousal-arrows">
+                  <div class="left-arrow">--</div>
+                  <div class="right-arrow">--</div>
+                </div>
                 {%- for media in card_product.media offset: 1 limit: max_images -%}
                   <img
                     srcset="

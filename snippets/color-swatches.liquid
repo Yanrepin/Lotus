@@ -109,7 +109,7 @@
         ></div>
       {%- endfor -%}
 
-      {% if overflow_count %}
+      {% if overflow_count > 0 %}
         <div class="plusSwatches" onclick="handleMoreSwatchesClick(event)">+ {{ overflow_count }}</div>
       {% endif %}
     </div>
