@@ -14,6 +14,11 @@
 
 <script src="{{ 'main-search.js' | asset_url }}" defer="defer"></script>
 
+{% comment %} JS for image carousal{% endcomment %}
+{% if section.settings.image_behavior == 'carousal' %}
+  <script src="{{ 'image-carousal.js' | asset_url }}" defer="defer"></script>
+{% endif %}
+
 <style>
   .template-search__header {
     margin-bottom: 3rem;

@@ -22,6 +22,11 @@
   <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+{% comment %} JS for image carousal{% endcomment %}
+{% if section.settings.image_behavior == 'carousal' %}
+  <script src="{{ 'image-carousal.js' | asset_url }}" defer="defer"></script>
+{% endif %}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;

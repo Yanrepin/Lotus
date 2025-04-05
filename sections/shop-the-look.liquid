@@ -11,6 +11,10 @@
 
 {% comment %} scripts files {% endcomment %}
 <script src="{{ 'shop-the-look.js' | asset_url }}" defer="defer"></script>
+{% comment %} JS for image carousal{% endcomment %}
+{% if section.settings.image_behavior == 'carousal' %}
+  <script src="{{ 'image-carousal.js' | asset_url }}" defer="defer"></script>
+{% endif %}
 
 {%- unless section.settings.quick_add == 'none' -%}
   {{ 'quick-add.css' | asset_url | stylesheet_tag }}

@@ -102,6 +102,10 @@
                 {% assign show_secondary_image = true %}
               {% elsif image_behavior == 'carousal' %}
                 {% assign image_carousal = true %}
+                {% comment %} JS for image carousal{% endcomment %}
+                {% if block.settings.image_behavior == 'carousal' %}
+                  <script src="{{ 'image-carousal.js' | asset_url }}" defer="defer"></script>
+                {% endif %}
               {% endif %}
 
               {% render 'card-product',
