@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "ตัวอย่างสี",
+      "colorVariantName": "ชื่อตัวเลือกของตัวแปรสี",
       "checkbox": "เปิดใช้งานตัวอย่างสี",
       "typeLabel": "ประเภทการแสดงตัวอย่างสี",
       "type1": "สี",

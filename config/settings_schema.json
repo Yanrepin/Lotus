@@ -419,6 +419,11 @@
         "default": false
       },
       {
+        "type": "text",
+        "id":"colorVariantName",
+        "label": "t:settings_schema.swatches.colorVariantName"
+      },
+      {
         "type": "select",
         "id": "swatchesOptions",
         "options": [

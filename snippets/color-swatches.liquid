@@ -41,77 +41,83 @@
 {% assign max_swatches = settings.maxSwatches | default: 5 %}
 {% assign swatch_size = settings.swatchesSize | times: 2 %}
 {% assign swatch_size_string = swatch_size | append: 'x' %}
+{% assign color_variant_name = settings.colorVariantName | downcase %}
+{% assign option = null %}
 
-{%- for option in product.options_with_values -%}
-  {% assign option_name = option.name | downcase %}
-
-  {% if color_names contains option_name %}
-    <div class="colorsWrapper" data-product="{{ product | json | escape }}">
-      {% assign overflow_count = option.values.size | minus: max_swatches %}
-
-      {%- for color_option in option.values -%}
-        {% assign index = forloop.index0 %}
-        {% assign max_index = max_swatches | minus: 1 %}
-
-        {% comment %} searching in the custom config {% endcomment %}
-        {%- assign bg_color = color_option | downcase -%}
-        {%- assign hex_code = '' -%}
-        {% if settings.swatchesOptions == 'color' %}
-          {%- for pair in color_config -%}
-            {%- assign parts = pair | split: ':' -%}
-            {%- if parts[0] == bg_color -%}
-              {%- assign hex_code = parts[1] -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
-
-        {% comment %} exicuted first variant image {% endcomment %}
-        {% assign related_variations = '' %}
-        {% assign image = '' %}
-        {% assign second_image = '' %}
-        {% if settings.swatchesOptions == 'variantFirstImage' %}
-          {% assign related_variations = product.variants | where: 'option1', bg_color %}
-          {% assign more_variants = product.variants | where: 'option2', bg_color %}
-          {% assign related_variations = related_variations | concat: more_variants %}
-          {% assign more_variants = product.variants | where: 'option3', bg_color %}
-          {% assign related_variations = related_variations | concat: more_variants %}
-          {% for variant in related_variations %}
-            {% if variant.featured_image and variant.featured_image.src %}
-              {% if image == '' %}
-                {% assign image = variant.featured_image.src %}
-              {% else %}
-                {% assign second_image = variant.featured_image.src %}
-                {% break %}
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-
-        {% comment %} swatch HTML element {% endcomment %}
-        <div
-          class="
-            colorSwatch
-            {% if settings.swatchesShape == 'circle' %}circle{% else %}square{% endif %}
-            {% if index > max_index %}overMaxSwatchHidden{% endif %}
-          "
-          data-color="{{ color_option | escape }}"
-          data-option="{{ option | escape }}"
-          {% if settings.swatchesOptions == 'variantFirstImage' %}
-            data-variantFirstImage="{{ image | escape  }}"
-            data-variantSecondImage="{{ second_image | escape  }}"
-          {% endif %}
-          aria-label="{{ color_option }}"
-          style="
-            {% if settings.swatchesOptions == 'color' %}background-color:{{ hex_code | default: bg_color }};{% endif %}
-            {% if settings.swatchesOptions == 'variantFirstImage' %}background-image: url('{{ image | img_url: swatch_size_string }}'); background-size: cover; background-position: center;{% endif %}
-          "
-          onclick="handleSwatchClick(event)"
-        ></div>
-      {%- endfor -%}
-
-      {% if overflow_count > 0 %}
-        <div class="plusSwatches" onclick="handleMoreSwatchesClick(event)">+ {{ overflow_count }}</div>
-      {% endif %}
-    </div>
+{%- for option_with_values in product.options_with_values -%}
+  {% assign option_name = option_with_values.name | downcase %}
+  {% if option_name == color_variant_name %}
+    {% assign option = option_with_values %}
+    {% break %}
   {% endif %}
 {%- endfor -%}
+
+{% if option %}
+  <div class="colorsWrapper" data-product="{{ product | json | escape }}">
+    {% assign overflow_count = option.values.size | minus: max_swatches %}
+
+    {%- for color_option in option.values -%}
+      {% assign index = forloop.index0 %}
+      {% assign max_index = max_swatches | minus: 1 %}
+
+      {% comment %} searching in the custom config {% endcomment %}
+      {%- assign bg_color = color_option | downcase -%}
+      {%- assign hex_code = '' -%}
+      {% if settings.swatchesOptions == 'color' %}
+        {%- for pair in color_config -%}
+          {%- assign parts = pair | split: ':' -%}
+          {%- if parts[0] == bg_color -%}
+            {%- assign hex_code = parts[1] -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {% comment %} exicuted first variant image {% endcomment %}
+      {% assign related_variations = '' %}
+      {% assign image = '' %}
+      {% assign second_image = '' %}
+      {% if settings.swatchesOptions == 'variantFirstImage' %}
+        {% assign related_variations = product.variants | where: 'option1', bg_color %}
+        {% assign more_variants = product.variants | where: 'option2', bg_color %}
+        {% assign related_variations = related_variations | concat: more_variants %}
+        {% assign more_variants = product.variants | where: 'option3', bg_color %}
+        {% assign related_variations = related_variations | concat: more_variants %}
+        {% for variant in related_variations %}
+          {% if variant.featured_image and variant.featured_image.src %}
+            {% if image == '' %}
+              {% assign image = variant.featured_image.src %}
+            {% else %}
+              {% assign second_image = variant.featured_image.src %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% comment %} swatch HTML element {% endcomment %}
+      <div
+        class="
+          colorSwatch
+          {% if settings.swatchesShape == 'circle' %}circle{% else %}square{% endif %}
+          {% if index > max_index %}overMaxSwatchHidden{% endif %}
+        "
+        data-color="{{ color_option | escape }}"
+        data-option="{{ option | escape }}"
+        {% if settings.swatchesOptions == 'variantFirstImage' %}
+          data-variantFirstImage="{{ image | escape  }}"
+          data-variantSecondImage="{{ second_image | escape  }}"
+        {% endif %}
+        aria-label="{{ color_option }}"
+        style="
+          {% if settings.swatchesOptions == 'color' %}background-color:{{ hex_code | default: bg_color }};{% endif %}
+          {% if settings.swatchesOptions == 'variantFirstImage' %}background-image: url('{{ image | img_url: swatch_size_string }}'); background-size: cover; background-position: center;{% endif %}
+        "
+        onclick="handleSwatchClick(event)"
+      ></div>
+    {%- endfor -%}
+
+    {% if overflow_count > 0 %}
+      <div class="plusSwatches" onclick="handleMoreSwatchesClick(event)">+ {{ overflow_count }}</div>
+    {% endif %}
+  </div>
+{% endif %}

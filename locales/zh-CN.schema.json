@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "颜色样本",
+      "colorVariantName": "颜色变体选项名称",
       "checkbox": "启用颜色样本",
       "typeLabel": "样本显示类型",
       "type1": "颜色",

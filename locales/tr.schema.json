@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Renk Örnekleri",
+      "colorVariantName": "Renk Varyantı Seçenek Adı",
       "checkbox": "Renk Örneklerini Etkinleştir",
       "typeLabel": "Örnek Gösterim Türü",
       "type1": "Renk",

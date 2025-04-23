@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Muestras",
+      "colorVariantName": "Nombre de la opción de variante de color",
       "checkbox": "Activar muestras",
       "typeLabel": "Tipo de visualización de muestra",
       "type1": "Color",

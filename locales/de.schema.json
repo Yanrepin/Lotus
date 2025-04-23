@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Farbmuster",
+      "colorVariantName": "Name der Farbvariantenoption",
       "checkbox": "Farbmuster aktivieren",
       "typeLabel": "Anzeigetyp für Farbmuster",
       "type1": "Farbe",

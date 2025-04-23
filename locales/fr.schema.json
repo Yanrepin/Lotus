@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Échantillons",
+      "colorVariantName": "Nom de l’option de variante de couleur",
       "checkbox": "Activer les échantillons",
       "typeLabel": "Type d’affichage des échantillons",
       "type1": "Couleur",

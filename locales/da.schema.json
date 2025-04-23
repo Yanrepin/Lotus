@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Prøver",
+      "colorVariantName": "Navn på farvevariant",
       "checkbox": "Aktivér prøver",
       "typeLabel": "Visningstype for prøve",
       "type1": "Farve",

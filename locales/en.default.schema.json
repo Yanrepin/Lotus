@@ -414,6 +414,7 @@
     },
     "swatches":{
       "name":"Swatches",
+      "colorVariantName":"Color Variant Option Name",
       "checkbox":"Enable Swatches",
       "typeLabel":"Swatch Display Type",
       "type1":"Color",

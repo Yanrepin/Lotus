@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Próbki kolorów",
+      "colorVariantName": "Nazwa opcji wariantu kolorystycznego",
       "checkbox": "Włącz próbki kolorów",
       "typeLabel": "Typ wyświetlania próbek",
       "type1": "Kolor",

@@ -2,6 +2,7 @@
   "settings_schema": {  
     "swatches": {
       "name": "Kleurstalen",
+      "colorVariantName": "Naam van de kleurvariantoptie",
       "checkbox": "Kleurstalen inschakelen",
       "typeLabel": "Weergavetype voor kleurstalen",
       "type1": "Kleur",

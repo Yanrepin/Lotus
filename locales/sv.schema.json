@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Färgmönster",
+      "colorVariantName": "Namn på färgvariantalternativ",
       "checkbox": "Aktivera färgmönster",
       "typeLabel": "Visningstyp för färgmönster",
       "type1": "Färg",

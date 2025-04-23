@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Amostras de Cores",
+      "colorVariantName": "Nome da opção de variante de cor",
       "checkbox": "Ativar Amostras de Cores",
       "typeLabel": "Tipo de Exibição da Amostra",
       "type1": "Cor",

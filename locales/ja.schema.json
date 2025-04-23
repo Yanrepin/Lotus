@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "カラースウォッチ",
+      "colorVariantName": "カラーバリエーションオプション名",
       "checkbox": "カラースウォッチを有効にする",
       "typeLabel": "スウォッチ表示タイプ",
       "type1": "色",

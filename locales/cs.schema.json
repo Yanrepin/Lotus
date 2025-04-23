@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Vzorníky",
+      "colorVariantName": "Název varianty barvy",
       "checkbox": "Povolit vzorníky",
       "typeLabel": "Typ zobrazení vzorníku",
       "type1": "Barva",

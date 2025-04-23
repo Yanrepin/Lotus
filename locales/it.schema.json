@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Campioni",
+      "colorVariantName": "Nome dell'opzione variante colore",
       "checkbox": "Abilita campioni",
       "typeLabel": "Tipo di visualizzazione campione",
       "type1": "Colore",

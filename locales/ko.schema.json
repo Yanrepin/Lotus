@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "색상 샘플",
+      "colorVariantName": "색상 옵션 이름",
       "checkbox": "색상 샘플 활성화",
       "typeLabel": "색상 샘플 표시 유형",
       "type1": "색상",

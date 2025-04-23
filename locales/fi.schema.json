@@ -2,6 +2,7 @@
   "settings_schema": {
     "swatches": {
       "name": "Värinäytteet",
+      "colorVariantName": "Värivaihtoehdon nimi",
       "checkbox": "Ota värinäytteet käyttöön",
       "typeLabel": "Värinäytteen näyttötyyppi",
       "type1": "Väri",
