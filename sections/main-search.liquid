@@ -225,6 +225,9 @@
                 results: search,
                 enable_filtering: section.settings.enable_filtering,
                 enable_sorting: section.settings.enable_sorting,
+                enable_grid_view: section.settings.enable_grid_view,
+                number_of_products_in_row_desktop: section.settings.columns_desktop,
+                number_of_products_in_row_mobile: section.settings.columns_mobile,
                 filter_type: section.settings.filter_type,
                 paginate: paginate
               %}
@@ -500,6 +503,12 @@
       "id": "enable_sorting",
       "default": true,
       "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_grid_view",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_grid_view.label"
     },
     {
       "type": "header",

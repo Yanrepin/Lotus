@@ -1598,6 +1598,9 @@
         "enable_sorting": {
           "label": "Ota lajittelu käyttöön"
         },
+        "enable_grid_view": {
+          "label": "Ota ruudukkonäkymäpainike käyttöön"
+        },
         "header__1": {
           "content": "Suodatus ja lajittelu"
         },

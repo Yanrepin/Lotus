@@ -1567,6 +1567,9 @@
         "enable_sorting": {
           "label": "Activer le tri"
         },
+        "enable_grid_view": {
+          "label": "Activer le bouton d’affichage en grille"
+        },
         "image_ratio": {
           "label": "Rapport d'image",
           "options__1": {

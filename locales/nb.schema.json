@@ -1567,6 +1567,9 @@
         "enable_sorting": {
           "label": "Aktiver sortering"
         },
+        "enable_grid_view": {
+          "label": "Aktiver knapp for rutenettvisning"
+        },
         "image_ratio": {
           "label": "Bildeforhold",
           "options__1": {

@@ -1598,6 +1598,9 @@
         "enable_sorting": {
           "label": "Povolit řazení"
         },
+        "enable_grid_view": {
+          "label": "Povolit tlačítko zobrazení mřížky"
+        },
         "header__1": {
           "content": "Filtrování a řazení"
         },

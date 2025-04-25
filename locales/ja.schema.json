@@ -1601,6 +1601,9 @@
         "enable_sorting": {
           "label": "並べ替えを有効にする"
         },
+        "enable_grid_view": {
+          "label": "グリッドビューボタンを有効にする"
+        },
         "header__3": {
           "content": "商品カード"
         },

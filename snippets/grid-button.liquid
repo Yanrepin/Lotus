@@ -1,0 +1,100 @@
+{% comment %}
+  Renders grid button
+
+  Accepts:
+  - number_of_products_in_row_desktop: {number} selected max number of products in row for desktop
+  - number_of_products_in_row_mobile: {number} selected max number of products in row for mobile
+
+  Usage:
+  {% render 'grid-button', number_of_products_in_row_desktop:4, number_of_products_in_row_mobile:2 %}
+{% endcomment %}
+
+{{ 'grid-button.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign number_of_products_in_row_desktop = number_of_products_in_row_desktop
+  assign number_of_products_in_row_mobile = number_of_products_in_row_mobile
+-%}
+
+<div class="grid-buttons-wrapper">
+  <div class="grid-buttons-desktop">
+    {% for i in (2..number_of_products_in_row_desktop) %}
+      <div
+        class="grid-button {% if number_of_products_in_row_desktop==i %}selected{% endif %}"
+        data-number="{{i}}"
+        onclick="gridChange('grid--{{i}}-col-desktop',true,{{i}})"
+      >
+        <svg
+          width="{{ i | times: 6 }}"
+          height="24"
+          fill="none"
+          viewBox="0 0 {{ i | times: 6 }} 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {% assign max_index = i | minus: 1 %}
+          {% for j in (0..max_index) %}
+          <rect x="{{ j | times: 6 | plus: 1 }}" y="5" width="4" height="14" fill="currentColor"></rect>
+          {% endfor %}
+        </svg>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="grid-buttons-mobile">
+    {% for i in (1..number_of_products_in_row_mobile) %}
+      {% assign number_of_products_in_row_mobile_number_type = number_of_products_in_row_mobile | plus: 0 %}
+      <div
+        class="grid-button {% if number_of_products_in_row_mobile_number_type==i %}selected{% endif %}"
+        data-number="{{i}}"
+        {% comment %} style="display:{% if number_of_products_in_row_mobile_number_type == i%}none{% else %}block{% endif %};" {% endcomment %}
+        onclick="gridChange('grid--{{i}}-col-tablet-down',false,{{i}})"
+      >
+        <svg
+          width="{{ i | times: 6 }}"
+          height="24"
+          fill="none"
+          viewBox="0 0 {{ i | times: 6 }} 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {% assign max_index = i | minus: 1 %}
+          {% for j in (0..max_index) %}
+          <rect x="{{ j | times: 6 | plus: 1 }}" y="5" width="4" height="14" fill="currentColor"></rect>
+          {% endfor %}
+        </svg>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  function gridChange(newClass, isDesktop, selectedNumber) {
+    const gridElement = document.querySelector('.product-grid');
+    if (!gridElement) return;
+
+    // Remove existing desktop or mobile class
+    const currentClass = [...gridElement.classList].find((cls) =>
+      isDesktop ? /^grid--\d+-col-desktop$/.test(cls) : /^grid--\d+-col-tablet-down$/.test(cls)
+    );
+
+    if (currentClass) {
+      gridElement.classList.remove(currentClass);
+    }
+
+    // Add new class
+    gridElement.classList.add(newClass);
+
+    // Toggle .selected on grid buttons
+    const buttonContainer = document.querySelector(isDesktop ? '.grid-buttons-desktop' : '.grid-buttons-mobile');
+
+    if (buttonContainer) {
+      const buttons = buttonContainer.querySelectorAll('.grid-button');
+      buttons.forEach((btn) => {
+        btn.classList.remove('selected');
+        console.log(btn);
+        if (parseInt(btn.dataset.number) === selectedNumber) {
+          btn.classList.add('selected');
+          btn.style.display = 'none';
+        }
+      });
+    }
+  }
+</script>

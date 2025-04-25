@@ -1601,6 +1601,9 @@
         "enable_sorting": {
           "label": "정렬 사용"
         },
+        "enable_grid_view": {
+          "label": "그리드 보기 버튼 활성화"
+        },
         "header__3": {
           "content": "제품 카드"
         },

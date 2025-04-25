@@ -1567,6 +1567,9 @@
         "enable_sorting": {
           "label": "Habilitar organização"
         },
+        "enable_grid_view": {
+          "label": "Habilitar botão de visualização em grade"
+        },
         "image_ratio": {
           "label": "Proporção da imagem",
           "options__1": {

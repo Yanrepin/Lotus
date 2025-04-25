@@ -5,11 +5,14 @@
   - results: {Object} Collection or Search object
   - enable_filtering: {Boolean} Show filtering when true
   - enable_sorting: {Boolean} Show sorting when true
+  - enable_grid_view: {Boolean} Show grid view change button
+  - number_of_products_in_row_desktop: {number} selected max number of products in row for desktop
+  - number_of_products_in_row_mobile: {number} selected max number of products in row for mobile
   - filter_type: {String} Type of filter
   - paginate: {Object}
 
   Usage:
-  {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical', paginate: paginate %}
+  {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, enable_grid_view:true, number_of_products_in_row_desktop:4, number_of_products_in_row_mobile:2, filter_type: 'vertical', paginate: paginate %}
 {% endcomment %}
 
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
@@ -433,11 +436,18 @@
               </span>
             </h2>
             {%- render 'loading-spinner' -%}
+            {% if enable_grid_view == true %}
+              {%- render 'grid-button',
+                number_of_products_in_row_desktop: number_of_products_in_row_desktop,
+                number_of_products_in_row_mobile: number_of_products_in_row_mobile
+              -%}
+            {% endif %}
           </div>
         {%- endif -%}
       </form>
     </facet-filters-form>
   {%- endif -%}
+
   {% comment %}  Drawer and mobile filter {% endcomment %}
   <menu-drawer
     class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}"
@@ -886,7 +896,13 @@
         {%- endif -%}
       </span>
     </h2>
-    {%- render 'loading-spinner' -%}
+    {%- render 'loading-spinner'== true -%}
+    {% if enable_grid_view %}
+      {%- render 'grid-button',
+        number_of_products_in_row_desktop: number_of_products_in_row_desktop,
+        number_of_products_in_row_mobile: number_of_products_in_row_mobile
+      -%}
+    {% endif %}
   </div>
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">

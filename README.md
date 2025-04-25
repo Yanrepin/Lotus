@@ -55,6 +55,8 @@ shopify theme publish
 - WhatsApp integration.
 - Swatches at product grid (PLP,SERP,Widget) , options for color\variant images
 - Sale badge with 3 options : sale label, differance in price, presentage off
+- Image carousal for products card
+- Grid change view button (it sticks to product count, if the switch is on)
 - RTL support (toggle available in layout settings).
   - For specific elements, use:
   ```sh

@@ -1598,6 +1598,9 @@
         "enable_sorting": {
           "label": "Abilita ordinamento"
         },
+        "enable_grid_view": {
+          "label": "Abilita pulsante vista griglia"
+        },
         "header__1": {
           "content": "Filtri e ordinamento"
         },

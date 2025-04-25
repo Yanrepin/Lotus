@@ -1,0 +1,44 @@
+@media screen and (max-width:990px) {
+    .grid-buttons-desktop{
+        display: none;
+    }
+    .grid-buttons-mobile{
+        display: flex;
+        gap: 5px;
+    }
+    /* only drawer on mobile */
+    .product-count {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+}
+@media screen and (min-width:990px) {
+    .grid-buttons-desktop {
+        display: flex;
+        gap: 5px;
+    }
+    .grid-buttons-mobile{
+        display: none;
+    }
+    /* drawer */
+    .product-count {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    /* horizontal + vertical */
+    .facets__form .product-count , .product-count-vertical{
+        display: flex;
+        align-items:flex-start;
+        height: 100%;
+    }
+}
+
+.grid-button.selected svg *{
+    fill: black;
+}
+.grid-buttons-wrapper{
+    margin-left: 5px;
+}

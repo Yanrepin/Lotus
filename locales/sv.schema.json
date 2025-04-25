@@ -1601,6 +1601,9 @@
         "enable_sorting": {
           "label": "Aktivera sortering"
         },
+        "enable_grid_view": {
+          "label": "Aktivera knapp för rutnätsvy"
+        },
         "header__3": {
           "content": "Produktkort"
         },

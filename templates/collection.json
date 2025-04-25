@@ -20,6 +20,7 @@
         "infinity_scroll":false,
         "enable_filtering": true,
         "enable_sorting": true,
+        "enable_grid_view": true,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36

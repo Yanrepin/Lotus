@@ -1601,6 +1601,9 @@
         "enable_sorting": {
           "label": "启用排序"
         },
+        "enable_grid_view": {
+          "label": "启用网格视图按钮"
+        },
         "header__3": {
           "content": "产品卡"
         },

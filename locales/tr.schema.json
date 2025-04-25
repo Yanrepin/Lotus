@@ -1567,6 +1567,9 @@
         "enable_sorting": {
           "label": "Sıralamayı etkinleştir"
         },
+        "enable_grid_view": {
+          "label": "Izgara görünümü düğmesini etkinleştir"
+        },
         "image_ratio": {
           "label": "Görsel oranı",
           "options__1": {

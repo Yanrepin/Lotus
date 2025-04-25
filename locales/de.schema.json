@@ -1567,6 +1567,9 @@
         "enable_sorting": {
           "label": "Sortieren aktivieren"
         },
+        "enable_grid_view": {
+          "label": "Schaltfläche für Rasteransicht aktivieren"
+        },
         "image_ratio": {
           "label": "Bildverhältnis",
           "options__1": {

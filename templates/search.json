@@ -10,6 +10,7 @@
         "show_rating": false,
         "enable_filtering": true,
         "enable_sorting": true,
+        "enable_grid_view": true,
         "article_show_date": true,
         "article_show_author": false,
         "columns_mobile": "2",

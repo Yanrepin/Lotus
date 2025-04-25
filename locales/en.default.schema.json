@@ -1893,6 +1893,9 @@
         "enable_sorting": {
           "label": "Enable sorting"
         },
+        "enable_grid_view":{
+          "label": "Enable grid view button"
+        },
         "image_ratio": {
           "label": "Image ratio",
           "options__1": {

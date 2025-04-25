@@ -1601,6 +1601,9 @@
         "enable_sorting": {
           "label": "Ativar ordenação"
         },
+        "enable_grid_view": {
+          "label": "Ativar botão de visualização em grelha"
+        },
         "header__3": {
           "content": "Cartão de produtos"
         },

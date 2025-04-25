@@ -1598,6 +1598,9 @@
         "enable_sorting": {
           "label": "Sortering inschakelen"
         },
+        "enable_grid_view": {
+          "label": "Knop voor rasterweergave inschakelen"
+        },
         "header__1": {
           "content": "Filteren en sorteren"
         },

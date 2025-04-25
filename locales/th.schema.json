@@ -1601,6 +1601,9 @@
         "enable_sorting": {
           "label": "เปิดใช้การจัดเรียง"
         },
+        "enable_grid_view": {
+          "label": "เปิดใช้งานปุ่มมุมมองกริด"
+        },
         "header__3": {
           "content": "บัตรสินค้า"
         },

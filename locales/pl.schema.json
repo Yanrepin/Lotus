@@ -1598,6 +1598,9 @@
         "enable_sorting": {
           "label": "Włącz sortowanie"
         },
+        "enable_grid_view": {
+          "label": "Włącz przycisk widoku siatki"
+        },
         "header__1": {
           "content": "Filtrowanie i sortowanie"
         },
