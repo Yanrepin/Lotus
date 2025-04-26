@@ -721,6 +721,36 @@
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
+    <script>
+      window.currentProduct = {
+        id: {{ product.id | json }},
+        title: {{ product.title | json }},
+        handle: {{ product.handle | json }},
+        image: {{ product.featured_image | image_url: width: 500 | json }},
+        url: {{ product.url | json }},
+        price: {{ product.price | money_without_currency | json }},
+        currency: {{ cart.currency.iso_code | json }}
+      };
+
+      (function() {
+        try {
+          let recentProducts = JSON.parse(localStorage.getItem('recentlyViewedProducts')) || [];
+
+          // Remove if already exists
+          recentProducts = recentProducts.filter(p => p.id !== window.currentProduct.id);
+
+          // Add to start
+          recentProducts.unshift(window.currentProduct);
+
+          // Limit to last 10 products
+          recentProducts = recentProducts.slice(0, 10);
+
+          localStorage.setItem('recentlyViewedProducts', JSON.stringify(recentProducts));
+        } catch(e) {
+          console.error('Failed to save recently viewed product:', e);
+        }
+      })();
+    </script>
   </div>
 </product-info>
 

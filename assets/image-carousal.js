@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const allProductsContainers = document.querySelectorAll(`.shop-the-look , .product-grid , .collage`);
+  const allProductsContainers = document.querySelectorAll(
+    `.shop-the-look , .product-grid , .collage , .related-products`
+  );
   allProductsContainers.forEach((productsContainer) => {
     //load images on mouse enter (with offset)
     productsContainer.addEventListener('mousemove', (e) => {
