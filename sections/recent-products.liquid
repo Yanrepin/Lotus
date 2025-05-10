@@ -27,7 +27,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <product-recommendations
-    class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="recent-products-list related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}"
     data-section-id="{{ section.id }}"
     data-product-id="{{ product.id }}"
@@ -40,32 +40,34 @@
         class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
         role="list"
       >
-        {% assign skip_card_product_styles = false %}
-        {% for recommendation in recommendations.products %}
-          <li class="grid__item">
-            {% assign image_behavior = section.settings.image_behavior %}
-            {% assign show_secondary_image = false %}
-            {% assign image_carousal = false %}
+        {% comment %}
+          {% assign skip_card_product_styles = false %}
+            {% for recommendation in recommendations.products %}
+              <li class="grid__item">
+                {% assign image_behavior = section.settings.image_behavior %}
+                {% assign show_secondary_image = false %}
+                {% assign image_carousal = false %}
 
-            {% if image_behavior == 'show secondary image' %}
-              {% assign show_secondary_image = true %}
-            {% elsif image_behavior == 'carousal' %}
-              {% assign image_carousal = true %}
-            {% endif %}
+                {% if image_behavior == 'show secondary image' %}
+                  {% assign show_secondary_image = true %}
+                {% elsif image_behavior == 'carousal' %}
+                  {% assign image_carousal = true %}
+                {% endif %}
 
-            {% render 'card-product',
-              card_product: recommendation,
-              media_aspect_ratio: section.settings.image_ratio,
-              image_shape: section.settings.image_shape,
-              show_secondary_image: show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating,
-              skip_styles: skip_card_product_styles,
-              image_carousal: image_carousal
-            %}
-          </li>
-          {%- assign skip_card_product_styles = true -%}
-        {% endfor %}
+                {% render 'card-product',
+                  card_product: recommendation,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  image_shape: section.settings.image_shape,
+                  show_secondary_image: show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  skip_styles: skip_card_product_styles,
+                  image_carousal: image_carousal
+                %}
+              </li>
+              {%- assign skip_card_product_styles = true -%}
+            {% endfor %}
+        {% endcomment %}
       </ul>
     {% endif %}
   </product-recommendations>
@@ -74,11 +76,77 @@
   {%- endif -%}
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedProducts = JSON.parse(localStorage.getItem('recentlyViewedProducts')) || [];
+    const container = document.querySelector('.recent-products-list');
+
+    if (!container || savedProducts.length === 0) return;
+
+    const renderSavedProducts = (productGrid) => {
+      savedProducts.forEach((product, index) => {
+        const imageUrl = product.images?.[0] || '';
+        const price = (product.price / 100).toFixed(2); // assumes cents
+        const ratio = 1;
+        if (product.featured_media && '{{section.settings.image_ratio}}' == 'portrait') ratio = 0.8;
+        else if (product.featured_media && '{{section.settings.image_ratio}}' == 'adapt')
+          ratio = product.featured_media.aspect_ratio;
+        else if (!ratio || ratio == 0) ratio = 1;
+        const productHTML = `
+          <li class="grid__item">
+                <div class="card-wrapper product-card-wrapper underline-links-hover">
+                  <div
+                    class="
+                      card card--{{settings.card_style}}
+                      ${product.featured_media ? 'card--media' : 'card--text'}
+                      ${'{{settings.card_style}}' == 'card' ? `color-{{settings.card_style}} gradient` : ''}
+                      ${
+                        '{{section.settings.image_shape}}' && '{{section.settings.image_shape}}' != 'default'
+                          ? 'card--shape'
+                          : ''
+                      }
+                      ${!product.featured_media && '{{settings.card_style}}' == 'card' ? 'ratio' : ''}
+                    "
+                    style="--ratio-percent: ${(1 / ratio) * 100}%;"
+                  >
+                    <div
+                      class="card__inner ${
+                        '{{settings.card_style}}' == 'standard' ? 'color-{{ settings.card_color_scheme }} gradient' : ''
+                      }
+                      ${product.featured_media || '{{settings.card_style}}' == 'standard' ? 'ratio' : ''}"
+                      style="--ratio-percent: ${(1 / ratio) * 100}%;"
+                    >
+
+
+                    </div>
+                  </div>
+                </div>
+              
+          </li>
+        `;
+        productGrid.insertAdjacentHTML('beforeend', productHTML);
+      });
+    };
+
+    // Use MutationObserver to wait for .product-grid
+    const observer = new MutationObserver((mutations, obs) => {
+      const productGrid = container.querySelector('.product-grid');
+      if (productGrid) {
+        renderSavedProducts(productGrid);
+        obs.disconnect(); // Stop observing once found and rendered
+      }
+    });
+
+    observer.observe(container, {
+      childList: true,
+      subtree: true,
+    });
+  });
+</script>
+
 {% schema %}
 {
-  "name": "t:sections.related-products.name",
-  "tag": "section",
-  "class": "section",
+  "name": "Recently Viewed Products",
   "settings": [
     {
       "type": "paragraph",

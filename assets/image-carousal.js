@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!productCard.classList.contains('carousal-images-loaded')) {
         productCard.classList.add('carousal-images-loaded');
         const carousalContainer = productCard.querySelector('.carousal');
-        const productCarousalMedia = JSON.parse(carousalContainer.dataset.media);
+        const productCarousalMedia = JSON.parse(carousalContainer?.dataset.media);
         const productCarousalMaxImages = JSON.parse(carousalContainer.dataset.maxImages);
         const pageWidth = JSON.parse(carousalContainer.dataset.pageWidth);
         const mediaContainer = productCard.querySelector('.media');

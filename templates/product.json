@@ -205,12 +205,29 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "recent-products": {
+      "type": "recent-products",
+      "settings": {
+        "heading": "You Lately Saw",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
     }
   },
   "order": [
     "main",
     "image-with-text",
     "multicolumn",
-    "related-products"
+    "related-products",
+    "recent-products",
   ]
 }
