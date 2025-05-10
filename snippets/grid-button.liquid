@@ -83,17 +83,19 @@
     gridElement.classList.add(newClass);
 
     // Toggle .selected on grid buttons
-    const buttonContainer = document.querySelector(isDesktop ? '.grid-buttons-desktop' : '.grid-buttons-mobile');
+    const buttonContainers = document.querySelectorAll(isDesktop ? '.grid-buttons-desktop' : '.grid-buttons-mobile');
 
-    if (buttonContainer) {
-      const buttons = buttonContainer.querySelectorAll('.grid-button');
-      buttons.forEach((btn) => {
-        btn.classList.remove('selected');
-        console.log(btn);
-        if (parseInt(btn.dataset.number) === selectedNumber) {
-          btn.classList.add('selected');
-        }
-      });
-    }
+    buttonContainers.forEach((buttonContainer) => {
+      if (buttonContainer) {
+        const buttons = buttonContainer.querySelectorAll('.grid-button');
+        buttons.forEach((btn) => {
+          btn.classList.remove('selected');
+
+          if (parseInt(btn.dataset.number) === selectedNumber) {
+            btn.classList.add('selected');
+          }
+        });
+      }
+    });
   }
 </script>
