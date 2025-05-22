@@ -1,280 +1,214 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'section-related-products.css' | asset_url | stylesheet_tag }}
+<div class="recently-viewed-wrapper page-width">
+  <div class="container">
+    <h3 class="recentviw_title">
+      <span class="text">{{ section.settings.heading }}</span>
+    </h3>
 
-{% if section.settings.image_shape == 'blob' %}
-  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
-{%- endif -%}
-
-{% comment %} JS for image carousal{% endcomment %}
-{% if section.settings.image_behavior == 'carousal' %}
-  <script src="{{ 'image-carousal.js' | asset_url }}" defer="defer"></script>
-{% endif %}
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <product-recommendations
-    class="recent-products-list related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-    data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}"
-    data-section-id="{{ section.id }}"
-    data-product-id="{{ product.id }}"
-  >
-    {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
-        {{ section.settings.heading }}
-      </h2>
-      <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-        role="list"
-      >
-        {% comment %}
-          {% assign skip_card_product_styles = false %}
-            {% for recommendation in recommendations.products %}
-              <li class="grid__item">
-                {% assign image_behavior = section.settings.image_behavior %}
-                {% assign show_secondary_image = false %}
-                {% assign image_carousal = false %}
-
-                {% if image_behavior == 'show secondary image' %}
-                  {% assign show_secondary_image = true %}
-                {% elsif image_behavior == 'carousal' %}
-                  {% assign image_carousal = true %}
-                {% endif %}
-
-                {% render 'card-product',
-                  card_product: recommendation,
-                  media_aspect_ratio: section.settings.image_ratio,
-                  image_shape: section.settings.image_shape,
-                  show_secondary_image: show_secondary_image,
-                  show_vendor: section.settings.show_vendor,
-                  show_rating: section.settings.show_rating,
-                  skip_styles: skip_card_product_styles,
-                  image_carousal: image_carousal
-                %}
-              </li>
-              {%- assign skip_card_product_styles = true -%}
-            {% endfor %}
-        {% endcomment %}
-      </ul>
-    {% endif %}
-  </product-recommendations>
-  {% if section.settings.image_shape == 'arch' %}
-    {{ 'mask-arch.svg' | inline_asset_content }}
-  {%- endif -%}
+    <ul class="recently-viewed-grid autoplay">
+      <!-- Recently viewed products will appear here -->
+    </ul>
+  </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedProducts = JSON.parse(localStorage.getItem('recentlyViewedProducts')) || [];
-    const container = document.querySelector('.recent-products-list');
+  const localViewed = localStorage.recentlyViewedProducts;
+  function getRecentlyViewedProducts() {
+    const productData = JSON.parse(localStorage.getItem('recentlyViewedProducts')) || [];
+    const recentlyViewedHtml = [];
+    console.log(productData);
+    if (productData.length > 1) {
+      productData.map((item) => {
+        const media = JSON.stringify(item.media);
+        const numOfMediaBiggerThen1 = item.media.length > 1;
+        recentlyViewedHtml.unshift(`<li class="grid__item product">
+<div class="product-item ${item.productTag}">
+<div class="card">
+<div class="card-product">
+<div class="card-product__wrapper">
+<a href="" class="card-media media--loading-effect card-media--adapt" style="padding-bottom: 100%;">
+<img class="motion-reduce" src="${item.featured_media.src}" 
+width="100%" 
+height="100%" 
+loading="lazy" 
+alt="${item.featured_media.alt}"
+${
+  '{{section.settings.image_behavior}}' == 'carousal'
+    ? `
+              data-media='${media}'
+              data-max-images="{{ 5 | json | escape }}"
+              data-page-width="{{ settings.page_width | json | escape }}" `
+    : ''
+}/>
 
-    if (!container || savedProducts.length === 0) return;
+${
+  item.media[1] != null && '{{section.settings.image_behavior}}' == 'show_secondary_image'
+    ? `
+  <img
+    src="${item.media[1]}"
+    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+    alt=""
+    class="motion-reduce"
+    loading="lazy"
+    width="${item.media[1].width}"
+    height="{$item.media[1].height }"
+  >`
+    : ''
+}
 
-    const renderSavedProducts = (productGrid) => {
-      savedProducts.forEach((product, index) => {
-        const imageUrl = product.images?.[0] || '';
-        const price = (product.price / 100).toFixed(2); // assumes cents
-        const ratio = 1;
-        if (product.featured_media && '{{section.settings.image_ratio}}' == 'portrait') ratio = 0.8;
-        else if (product.featured_media && '{{section.settings.image_ratio}}' == 'adapt')
-          ratio = product.featured_media.aspect_ratio;
-        else if (!ratio || ratio == 0) ratio = 1;
-        const productHTML = `
-          <li class="grid__item">
-                <div class="card-wrapper product-card-wrapper underline-links-hover">
-                  <div
-                    class="
-                      card card--{{settings.card_style}}
-                      ${product.featured_media ? 'card--media' : 'card--text'}
-                      ${'{{settings.card_style}}' == 'card' ? `color-{{settings.card_style}} gradient` : ''}
-                      ${
-                        '{{section.settings.image_shape}}' && '{{section.settings.image_shape}}' != 'default'
-                          ? 'card--shape'
-                          : ''
-                      }
-                      ${!product.featured_media && '{{settings.card_style}}' == 'card' ? 'ratio' : ''}
-                    "
-                    style="--ratio-percent: ${(1 / ratio) * 100}%;"
-                  >
-                    <div
-                      class="card__inner ${
-                        '{{settings.card_style}}' == 'standard' ? 'color-{{ settings.card_color_scheme }} gradient' : ''
-                      }
-                      ${product.featured_media || '{{settings.card_style}}' == 'standard' ? 'ratio' : ''}"
-                      style="--ratio-percent: ${(1 / ratio) * 100}%;"
-                    >
+${
+  numOfMediaBiggerThen1 && '{{section.settings.image_behavior}}' == 'carousal'
+    ? `<div class="carousal-arrows">
+    <div class="left-arrow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#000000"
+        height="16px"
+        width="16px"
+        viewBox="0 0 330 330"
+      >
+        <path d="M79.394,154.389l150-149.996c5.857-5.858,15.355-5.858,21.213,0.001c5.857,5.858,5.857,15.355-0.001,21.213
+          L111.213,165.997l139.393,139.391c5.857,5.858,5.857,15.355-0.001,21.213C248.678,328.536,244.839,330,241,330
+          s-7.678-1.464-10.607-4.394L80.394,175.602c-2.814-2.813-4.394-6.628-4.394-10.606
+          C75,161.018,76.58,157.202,79.394,154.389z"/>
+      </svg>
+    </div>
+    <div class="right-arrow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        fill="#000000"
+        height="16px"
+        width="16px"
+        version="1.1"
+        id="Layer_1"
+        viewBox="0 0 330 330"
+        xml:space="preserve"
+      >
+        <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001  c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213  C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606  C255,161.018,253.42,157.202,250.606,154.389z"/>
+      </svg>
+    </div>
+  </div>`
+    : ''
+}
+</a>
+<div class="card-product__group group-right">
 
 
-                    </div>
-                  </div>
-                </div>
-              
-          </li>
-        `;
-        productGrid.insertAdjacentHTML('beforeend', productHTML);
+</div>
+</div>
+</div>
+</div>
+<div class="card-information">
+<div class="card-information__wrapper text-center">
+<a class="card-title link-underline card-title-ellipsis" href="${item.url}">
+<span class="text">
+<span>
+${item.title}
+</span>
+</span>
+</a>
+<div class="card-price">
+<div class="price price--on-sale">
+<dl>
+<div class="price__sale">
+<dd class="price__last">
+<span class="price-item price-item--sale" data-productprice="${item.productPricedata}">
+
+${item.price}
+</span>
+</dd>
+<dd class="price__compare">
+<span class="price-item price-item--regular" data-productcompareprice="${item.productComparePricedata}">
+${item.compare_at_price}
+</span>
+</dd>
+</div>
+</dl>
+</div>
+<div class="price">
+<div class="price__container">
+<div class="halo-productBadges card__badge next_price badge-left halo-productBadges--left">
+<span class="badge sale-badge cstm_discount_pp"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>`);
       });
-    };
+    } else {
+      $('.recently-viewed-wrapper').hide();
+    }
+    const newProductData = `${recentlyViewedHtml.join('')}`;
+    const fullContent = document.getElementsByClassName('recently-viewed-grid');
+    fullContent[0].innerHTML = newProductData;
+  }
 
-    // Use MutationObserver to wait for .product-grid
-    const observer = new MutationObserver((mutations, obs) => {
-      const productGrid = container.querySelector('.product-grid');
-      if (productGrid) {
-        renderSavedProducts(productGrid);
-        obs.disconnect(); // Stop observing once found and rendered
-      }
-    });
+  document.addEventListener('DOMContentLoaded', function (event) {
+    getRecentlyViewedProducts();
+  });
 
-    observer.observe(container, {
-      childList: true,
-      subtree: true,
+  jQuery(document).ready(function () {
+    setTimeout(function () {
+      jQuery('.recently-viewed-wrapper .recently-viewed-grid li.grid__item').each(function ($) {
+        var compare_price_cm = jQuery(this).find('.card-price .price__compare .price-item').data('productcompareprice');
+        var regular_price_cm = jQuery(this).find('.card-price .price__last .price-item').data('productprice');
+        console.log(compare_price_cm);
+        console.log(regular_price_cm);
+        var decreaseValue = compare_price_cm - regular_price_cm;
+        var result = Math.round((decreaseValue / compare_price_cm) * 100);
+        // console.log(result+"%");
+        if (compare_price_cm > regular_price_cm) {
+          jQuery(this)
+            .find('span.cstm_discount_pp')
+            .text('' + result + '%OFF');
+        }
+      });
+    }, 500);
+
+    $('.autoplay').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: true,
+      prevArrow:
+        "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+      nextArrow:
+        "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerPadding: '40px',
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerPadding: '40px',
+            slidesToShow: 2,
+          },
+        },
+      ],
     });
   });
 </script>
 
 {% schema %}
 {
-  "name": "Recently Viewed Products",
+  "name": "Custom Recently Products",
   "settings": [
     {
-      "type": "paragraph",
-      "content": "t:sections.related-products.settings.paragraph__1.content"
-    },
-    {
-      "type": "inline_richtext",
+      "type": "text",
       "id": "heading",
-      "default": "t:sections.related-products.settings.paragraph__1.default",
-      "label": "t:sections.related-products.settings.heading.label"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        },
-        {
-          "value": "hxl",
-          "label": "t:sections.all.heading_size.options__4.label"
-        },
-        {
-          "value": "hxxl",
-          "label": "t:sections.all.heading_size.options__5.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
-    },
-    {
-      "type": "range",
-      "id": "products_to_show",
-      "min": 2,
-      "max": 10,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.related-products.settings.products_to_show.label"
-    },
-    {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 6,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.related-products.settings.columns_desktop.label"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "info": "t:sections.all.colors.has_cards_info",
-      "default": "scheme-1"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.related-products.settings.header__2.content"
-    },
-    {
-      "type": "select",
-      "id": "image_ratio",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.related-products.settings.image_ratio.options__1.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.related-products.settings.image_ratio.options__2.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.related-products.settings.image_ratio.options__3.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.related-products.settings.image_ratio.label"
-    },
-    {
-      "type": "select",
-      "id": "image_shape",
-      "options": [
-        {
-          "value": "default",
-          "label": "t:sections.all.image_shape.options__1.label"
-        },
-        {
-          "value": "arch",
-          "label": "t:sections.all.image_shape.options__2.label"
-        },
-        {
-          "value": "blob",
-          "label": "t:sections.all.image_shape.options__3.label"
-        },
-        {
-          "value": "chevronleft",
-          "label": "t:sections.all.image_shape.options__4.label"
-        },
-        {
-          "value": "chevronright",
-          "label": "t:sections.all.image_shape.options__5.label"
-        },
-        {
-          "value": "diamond",
-          "label": "t:sections.all.image_shape.options__6.label"
-        },
-        {
-          "value": "parallelogram",
-          "label": "t:sections.all.image_shape.options__7.label"
-        },
-        {
-          "value": "round",
-          "label": "t:sections.all.image_shape.options__8.label"
-        }
-      ],
-      "default": "default",
-      "label": "t:sections.all.image_shape.label",
-      "info": "t:sections.all.image_shape.info"
+      "default": "Recently Viewed",
+      "label": "Heading"
     },
     {
       "type": "select",
@@ -301,57 +235,11 @@
       "id": "show_vendor",
       "default": false,
       "label": "t:sections.related-products.settings.show_vendor.label"
-    },
+    }
+  ],
+  "presets": [
     {
-      "type": "checkbox",
-      "id": "show_rating",
-      "default": false,
-      "label": "t:sections.related-products.settings.show_rating.label",
-      "info": "t:sections.related-products.settings.show_rating.info"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.related-products.settings.header_mobile.content"
-    },
-    {
-      "type": "select",
-      "id": "columns_mobile",
-      "default": "2",
-      "label": "t:sections.related-products.settings.columns_mobile.label",
-      "options": [
-        {
-          "value": "1",
-          "label": "t:sections.related-products.settings.columns_mobile.options__1.label"
-        },
-        {
-          "value": "2",
-          "label": "t:sections.related-products.settings.columns_mobile.options__2.label"
-        }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "name": "Custom Recently Products"
     }
   ]
 }
